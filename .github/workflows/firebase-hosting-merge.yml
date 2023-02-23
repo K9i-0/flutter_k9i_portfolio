@@ -10,7 +10,12 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: wasabeef/import-asdf-tool-versions-action@v1.0.1
+        id: asdf
+      - name: Install Flutter
+        run: ./.github/workflows/scripts/install-flutter.sh ${{ steps.asdf.outputs.flutter }}
+      - run: flutter pub get
       - run: flutter build web
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
