@@ -5,12 +5,12 @@ import 'package:flutter_k9i_portfolio/features/settings/settings.dart';
 import 'package:flutter_k9i_portfolio/features/works/works.dart';
 import 'package:flutter_k9i_portfolio/resources/assets.gen.dart';
 import 'package:flutter_k9i_portfolio/resources/flutter_colors.dart';
+import 'package:flutter_k9i_portfolio/resources/l10n/generated/l10n.dart';
 import 'package:flutter_k9i_portfolio/utils/build_context_x.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:simple_icons/simple_icons.dart';
-import 'package:text_style_preview/text_style_preview.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class HomeScreen extends ConsumerWidget {
@@ -93,6 +93,7 @@ class Content extends ConsumerWidget {
             ],
           ),
         ),
+        const SliverGap(32),
       ],
     );
   }
@@ -114,18 +115,14 @@ class Header extends StatelessWidget {
           ),
         ),
         const Gap(16),
-        TextStylePreview(
-          child: Text(
-            "K9i",
-            style: context.textTheme.headlineMedium,
-          ),
+        Text(
+          "K9i (Kota Hayashi)",
+          style: context.textTheme.headlineMedium,
         ),
         const Gap(8),
-        TextStylePreview(
-          child: Text(
-            "Flutter Developer 💙",
-            style: context.textTheme.bodyMedium,
-          ),
+        Text(
+          "Flutter Developer 💙",
+          style: context.textTheme.bodyMedium,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -268,8 +265,7 @@ class FlutterPackageWorkItem extends StatelessWidget {
                     IconButton(
                       onPressed: () => launchUrlString(work.pubDevUrl),
                       icon: Icon(
-                        // TODO(K9i-0): pub.devのアイコンにしたい
-                        Icons.language,
+                        SimpleIcons.dart,
                         color: context.colorScheme.onPrimaryContainer,
                       ),
                     ),
@@ -459,11 +455,12 @@ class CreateAtText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final createdAtFormatter = DateFormat.yMMMd();
+    // TODO(K9i-0): 本来はlocaleの指定は不要なので消したい
+    final createdAtFormatter = DateFormat.yMMMd(L10n.of(context).localeName);
 
     return Text(
       createdAtFormatter.format(createdAt),
-      style: context.textTheme.bodySmall?.apply(
+      style: context.textTheme.labelMedium?.apply(
         color: context.colorScheme.onPrimaryContainer,
       ),
     );

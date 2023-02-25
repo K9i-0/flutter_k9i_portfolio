@@ -23,7 +23,7 @@ class WorksRepository {
       ),
       Work.flutterPackage(
         createdAt: DateTime(2022, 12, 18),
-        description: 'Type Scaleを選ぶためのText Styleプレビューウィジェットです。',
+        description: 'Type Scaleを選ぶためのText Styleプレビューウィジェットを提供するパッケージです。',
         packageName: 'text_style_preview',
         pubDevUrl: 'https://pub.dev/packages/text_style_preview',
         githubUrl: 'https://github.com/K9i-0/text_style_preview',
