@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$Work {
   DateTime get createdAt => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
-  String get githubUrl => throw _privateConstructorUsedError;
+  String? get githubUrl => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(DateTime createdAt, String description,
@@ -27,19 +27,14 @@ mixin _$Work {
     required TResult Function(
             DateTime createdAt,
             String description,
-            String iconImagePath,
+            AssetGenImage iconImage,
             String appName,
             String appStoreUrl,
             String googlePlayUrl,
-            String githubUrl)
+            String? githubUrl)
         mobileApp,
-    required TResult Function(
-            DateTime createdAt,
-            String description,
-            String iconImagePath,
-            String appName,
-            String webUrl,
-            String githubUrl)
+    required TResult Function(DateTime createdAt, String description,
+            String appName, String? webUrl, String githubUrl)
         webApp,
   }) =>
       throw _privateConstructorUsedError;
@@ -51,19 +46,14 @@ mixin _$Work {
     TResult? Function(
             DateTime createdAt,
             String description,
-            String iconImagePath,
+            AssetGenImage iconImage,
             String appName,
             String appStoreUrl,
             String googlePlayUrl,
-            String githubUrl)?
+            String? githubUrl)?
         mobileApp,
-    TResult? Function(
-            DateTime createdAt,
-            String description,
-            String iconImagePath,
-            String appName,
-            String webUrl,
-            String githubUrl)?
+    TResult? Function(DateTime createdAt, String description, String appName,
+            String? webUrl, String githubUrl)?
         webApp,
   }) =>
       throw _privateConstructorUsedError;
@@ -75,19 +65,14 @@ mixin _$Work {
     TResult Function(
             DateTime createdAt,
             String description,
-            String iconImagePath,
+            AssetGenImage iconImage,
             String appName,
             String appStoreUrl,
             String googlePlayUrl,
-            String githubUrl)?
+            String? githubUrl)?
         mobileApp,
-    TResult Function(
-            DateTime createdAt,
-            String description,
-            String iconImagePath,
-            String appName,
-            String webUrl,
-            String githubUrl)?
+    TResult Function(DateTime createdAt, String description, String appName,
+            String? webUrl, String githubUrl)?
         webApp,
     required TResult orElse(),
   }) =>
@@ -154,7 +139,7 @@ class _$WorkCopyWithImpl<$Res, $Val extends Work>
           : description // ignore: cast_nullable_to_non_nullable
               as String,
       githubUrl: null == githubUrl
-          ? _value.githubUrl
+          ? _value.githubUrl!
           : githubUrl // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
@@ -282,19 +267,14 @@ class _$FlutterPackageWork implements FlutterPackageWork {
     required TResult Function(
             DateTime createdAt,
             String description,
-            String iconImagePath,
+            AssetGenImage iconImage,
             String appName,
             String appStoreUrl,
             String googlePlayUrl,
-            String githubUrl)
+            String? githubUrl)
         mobileApp,
-    required TResult Function(
-            DateTime createdAt,
-            String description,
-            String iconImagePath,
-            String appName,
-            String webUrl,
-            String githubUrl)
+    required TResult Function(DateTime createdAt, String description,
+            String appName, String? webUrl, String githubUrl)
         webApp,
   }) {
     return flutterPackage(
@@ -310,19 +290,14 @@ class _$FlutterPackageWork implements FlutterPackageWork {
     TResult? Function(
             DateTime createdAt,
             String description,
-            String iconImagePath,
+            AssetGenImage iconImage,
             String appName,
             String appStoreUrl,
             String googlePlayUrl,
-            String githubUrl)?
+            String? githubUrl)?
         mobileApp,
-    TResult? Function(
-            DateTime createdAt,
-            String description,
-            String iconImagePath,
-            String appName,
-            String webUrl,
-            String githubUrl)?
+    TResult? Function(DateTime createdAt, String description, String appName,
+            String? webUrl, String githubUrl)?
         webApp,
   }) {
     return flutterPackage?.call(
@@ -338,19 +313,14 @@ class _$FlutterPackageWork implements FlutterPackageWork {
     TResult Function(
             DateTime createdAt,
             String description,
-            String iconImagePath,
+            AssetGenImage iconImage,
             String appName,
             String appStoreUrl,
             String googlePlayUrl,
-            String githubUrl)?
+            String? githubUrl)?
         mobileApp,
-    TResult Function(
-            DateTime createdAt,
-            String description,
-            String iconImagePath,
-            String appName,
-            String webUrl,
-            String githubUrl)?
+    TResult Function(DateTime createdAt, String description, String appName,
+            String? webUrl, String githubUrl)?
         webApp,
     required TResult orElse(),
   }) {
@@ -428,11 +398,11 @@ abstract class _$$MobileAppWorkCopyWith<$Res> implements $WorkCopyWith<$Res> {
   $Res call(
       {DateTime createdAt,
       String description,
-      String iconImagePath,
+      AssetGenImage iconImage,
       String appName,
       String appStoreUrl,
       String googlePlayUrl,
-      String githubUrl});
+      String? githubUrl});
 }
 
 /// @nodoc
@@ -448,11 +418,11 @@ class __$$MobileAppWorkCopyWithImpl<$Res>
   $Res call({
     Object? createdAt = null,
     Object? description = null,
-    Object? iconImagePath = null,
+    Object? iconImage = null,
     Object? appName = null,
     Object? appStoreUrl = null,
     Object? googlePlayUrl = null,
-    Object? githubUrl = null,
+    Object? githubUrl = freezed,
   }) {
     return _then(_$MobileAppWork(
       createdAt: null == createdAt
@@ -463,10 +433,10 @@ class __$$MobileAppWorkCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      iconImagePath: null == iconImagePath
-          ? _value.iconImagePath
-          : iconImagePath // ignore: cast_nullable_to_non_nullable
-              as String,
+      iconImage: null == iconImage
+          ? _value.iconImage
+          : iconImage // ignore: cast_nullable_to_non_nullable
+              as AssetGenImage,
       appName: null == appName
           ? _value.appName
           : appName // ignore: cast_nullable_to_non_nullable
@@ -479,10 +449,10 @@ class __$$MobileAppWorkCopyWithImpl<$Res>
           ? _value.googlePlayUrl
           : googlePlayUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      githubUrl: null == githubUrl
+      githubUrl: freezed == githubUrl
           ? _value.githubUrl
           : githubUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -493,18 +463,18 @@ class _$MobileAppWork implements MobileAppWork {
   const _$MobileAppWork(
       {required this.createdAt,
       required this.description,
-      required this.iconImagePath,
+      required this.iconImage,
       required this.appName,
       required this.appStoreUrl,
       required this.googlePlayUrl,
-      required this.githubUrl});
+      this.githubUrl});
 
   @override
   final DateTime createdAt;
   @override
   final String description;
   @override
-  final String iconImagePath;
+  final AssetGenImage iconImage;
   @override
   final String appName;
   @override
@@ -512,11 +482,11 @@ class _$MobileAppWork implements MobileAppWork {
   @override
   final String googlePlayUrl;
   @override
-  final String githubUrl;
+  final String? githubUrl;
 
   @override
   String toString() {
-    return 'Work.mobileApp(createdAt: $createdAt, description: $description, iconImagePath: $iconImagePath, appName: $appName, appStoreUrl: $appStoreUrl, googlePlayUrl: $googlePlayUrl, githubUrl: $githubUrl)';
+    return 'Work.mobileApp(createdAt: $createdAt, description: $description, iconImage: $iconImage, appName: $appName, appStoreUrl: $appStoreUrl, googlePlayUrl: $googlePlayUrl, githubUrl: $githubUrl)';
   }
 
   @override
@@ -528,8 +498,8 @@ class _$MobileAppWork implements MobileAppWork {
                 other.createdAt == createdAt) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            (identical(other.iconImagePath, iconImagePath) ||
-                other.iconImagePath == iconImagePath) &&
+            (identical(other.iconImage, iconImage) ||
+                other.iconImage == iconImage) &&
             (identical(other.appName, appName) || other.appName == appName) &&
             (identical(other.appStoreUrl, appStoreUrl) ||
                 other.appStoreUrl == appStoreUrl) &&
@@ -541,7 +511,7 @@ class _$MobileAppWork implements MobileAppWork {
 
   @override
   int get hashCode => Object.hash(runtimeType, createdAt, description,
-      iconImagePath, appName, appStoreUrl, googlePlayUrl, githubUrl);
+      iconImage, appName, appStoreUrl, googlePlayUrl, githubUrl);
 
   @JsonKey(ignore: true)
   @override
@@ -558,23 +528,18 @@ class _$MobileAppWork implements MobileAppWork {
     required TResult Function(
             DateTime createdAt,
             String description,
-            String iconImagePath,
+            AssetGenImage iconImage,
             String appName,
             String appStoreUrl,
             String googlePlayUrl,
-            String githubUrl)
+            String? githubUrl)
         mobileApp,
-    required TResult Function(
-            DateTime createdAt,
-            String description,
-            String iconImagePath,
-            String appName,
-            String webUrl,
-            String githubUrl)
+    required TResult Function(DateTime createdAt, String description,
+            String appName, String? webUrl, String githubUrl)
         webApp,
   }) {
-    return mobileApp(createdAt, description, iconImagePath, appName,
-        appStoreUrl, googlePlayUrl, githubUrl);
+    return mobileApp(createdAt, description, iconImage, appName, appStoreUrl,
+        googlePlayUrl, githubUrl);
   }
 
   @override
@@ -586,22 +551,17 @@ class _$MobileAppWork implements MobileAppWork {
     TResult? Function(
             DateTime createdAt,
             String description,
-            String iconImagePath,
+            AssetGenImage iconImage,
             String appName,
             String appStoreUrl,
             String googlePlayUrl,
-            String githubUrl)?
+            String? githubUrl)?
         mobileApp,
-    TResult? Function(
-            DateTime createdAt,
-            String description,
-            String iconImagePath,
-            String appName,
-            String webUrl,
-            String githubUrl)?
+    TResult? Function(DateTime createdAt, String description, String appName,
+            String? webUrl, String githubUrl)?
         webApp,
   }) {
-    return mobileApp?.call(createdAt, description, iconImagePath, appName,
+    return mobileApp?.call(createdAt, description, iconImage, appName,
         appStoreUrl, googlePlayUrl, githubUrl);
   }
 
@@ -614,25 +574,20 @@ class _$MobileAppWork implements MobileAppWork {
     TResult Function(
             DateTime createdAt,
             String description,
-            String iconImagePath,
+            AssetGenImage iconImage,
             String appName,
             String appStoreUrl,
             String googlePlayUrl,
-            String githubUrl)?
+            String? githubUrl)?
         mobileApp,
-    TResult Function(
-            DateTime createdAt,
-            String description,
-            String iconImagePath,
-            String appName,
-            String webUrl,
-            String githubUrl)?
+    TResult Function(DateTime createdAt, String description, String appName,
+            String? webUrl, String githubUrl)?
         webApp,
     required TResult orElse(),
   }) {
     if (mobileApp != null) {
-      return mobileApp(createdAt, description, iconImagePath, appName,
-          appStoreUrl, googlePlayUrl, githubUrl);
+      return mobileApp(createdAt, description, iconImage, appName, appStoreUrl,
+          googlePlayUrl, githubUrl);
     }
     return orElse();
   }
@@ -676,22 +631,22 @@ abstract class MobileAppWork implements Work {
   const factory MobileAppWork(
       {required final DateTime createdAt,
       required final String description,
-      required final String iconImagePath,
+      required final AssetGenImage iconImage,
       required final String appName,
       required final String appStoreUrl,
       required final String googlePlayUrl,
-      required final String githubUrl}) = _$MobileAppWork;
+      final String? githubUrl}) = _$MobileAppWork;
 
   @override
   DateTime get createdAt;
   @override
   String get description;
-  String get iconImagePath;
+  AssetGenImage get iconImage;
   String get appName;
   String get appStoreUrl;
   String get googlePlayUrl;
   @override
-  String get githubUrl;
+  String? get githubUrl;
   @override
   @JsonKey(ignore: true)
   _$$MobileAppWorkCopyWith<_$MobileAppWork> get copyWith =>
@@ -708,9 +663,8 @@ abstract class _$$WebAppWorkCopyWith<$Res> implements $WorkCopyWith<$Res> {
   $Res call(
       {DateTime createdAt,
       String description,
-      String iconImagePath,
       String appName,
-      String webUrl,
+      String? webUrl,
       String githubUrl});
 }
 
@@ -727,9 +681,8 @@ class __$$WebAppWorkCopyWithImpl<$Res>
   $Res call({
     Object? createdAt = null,
     Object? description = null,
-    Object? iconImagePath = null,
     Object? appName = null,
-    Object? webUrl = null,
+    Object? webUrl = freezed,
     Object? githubUrl = null,
   }) {
     return _then(_$WebAppWork(
@@ -741,18 +694,14 @@ class __$$WebAppWorkCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      iconImagePath: null == iconImagePath
-          ? _value.iconImagePath
-          : iconImagePath // ignore: cast_nullable_to_non_nullable
-              as String,
       appName: null == appName
           ? _value.appName
           : appName // ignore: cast_nullable_to_non_nullable
               as String,
-      webUrl: null == webUrl
+      webUrl: freezed == webUrl
           ? _value.webUrl
           : webUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       githubUrl: null == githubUrl
           ? _value.githubUrl
           : githubUrl // ignore: cast_nullable_to_non_nullable
@@ -767,9 +716,8 @@ class _$WebAppWork implements WebAppWork {
   const _$WebAppWork(
       {required this.createdAt,
       required this.description,
-      required this.iconImagePath,
       required this.appName,
-      required this.webUrl,
+      this.webUrl,
       required this.githubUrl});
 
   @override
@@ -777,17 +725,15 @@ class _$WebAppWork implements WebAppWork {
   @override
   final String description;
   @override
-  final String iconImagePath;
-  @override
   final String appName;
   @override
-  final String webUrl;
+  final String? webUrl;
   @override
   final String githubUrl;
 
   @override
   String toString() {
-    return 'Work.webApp(createdAt: $createdAt, description: $description, iconImagePath: $iconImagePath, appName: $appName, webUrl: $webUrl, githubUrl: $githubUrl)';
+    return 'Work.webApp(createdAt: $createdAt, description: $description, appName: $appName, webUrl: $webUrl, githubUrl: $githubUrl)';
   }
 
   @override
@@ -799,8 +745,6 @@ class _$WebAppWork implements WebAppWork {
                 other.createdAt == createdAt) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            (identical(other.iconImagePath, iconImagePath) ||
-                other.iconImagePath == iconImagePath) &&
             (identical(other.appName, appName) || other.appName == appName) &&
             (identical(other.webUrl, webUrl) || other.webUrl == webUrl) &&
             (identical(other.githubUrl, githubUrl) ||
@@ -808,8 +752,8 @@ class _$WebAppWork implements WebAppWork {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, createdAt, description,
-      iconImagePath, appName, webUrl, githubUrl);
+  int get hashCode => Object.hash(
+      runtimeType, createdAt, description, appName, webUrl, githubUrl);
 
   @JsonKey(ignore: true)
   @override
@@ -826,23 +770,17 @@ class _$WebAppWork implements WebAppWork {
     required TResult Function(
             DateTime createdAt,
             String description,
-            String iconImagePath,
+            AssetGenImage iconImage,
             String appName,
             String appStoreUrl,
             String googlePlayUrl,
-            String githubUrl)
+            String? githubUrl)
         mobileApp,
-    required TResult Function(
-            DateTime createdAt,
-            String description,
-            String iconImagePath,
-            String appName,
-            String webUrl,
-            String githubUrl)
+    required TResult Function(DateTime createdAt, String description,
+            String appName, String? webUrl, String githubUrl)
         webApp,
   }) {
-    return webApp(
-        createdAt, description, iconImagePath, appName, webUrl, githubUrl);
+    return webApp(createdAt, description, appName, webUrl, githubUrl);
   }
 
   @override
@@ -854,23 +792,17 @@ class _$WebAppWork implements WebAppWork {
     TResult? Function(
             DateTime createdAt,
             String description,
-            String iconImagePath,
+            AssetGenImage iconImage,
             String appName,
             String appStoreUrl,
             String googlePlayUrl,
-            String githubUrl)?
+            String? githubUrl)?
         mobileApp,
-    TResult? Function(
-            DateTime createdAt,
-            String description,
-            String iconImagePath,
-            String appName,
-            String webUrl,
-            String githubUrl)?
+    TResult? Function(DateTime createdAt, String description, String appName,
+            String? webUrl, String githubUrl)?
         webApp,
   }) {
-    return webApp?.call(
-        createdAt, description, iconImagePath, appName, webUrl, githubUrl);
+    return webApp?.call(createdAt, description, appName, webUrl, githubUrl);
   }
 
   @override
@@ -882,25 +814,19 @@ class _$WebAppWork implements WebAppWork {
     TResult Function(
             DateTime createdAt,
             String description,
-            String iconImagePath,
+            AssetGenImage iconImage,
             String appName,
             String appStoreUrl,
             String googlePlayUrl,
-            String githubUrl)?
+            String? githubUrl)?
         mobileApp,
-    TResult Function(
-            DateTime createdAt,
-            String description,
-            String iconImagePath,
-            String appName,
-            String webUrl,
-            String githubUrl)?
+    TResult Function(DateTime createdAt, String description, String appName,
+            String? webUrl, String githubUrl)?
         webApp,
     required TResult orElse(),
   }) {
     if (webApp != null) {
-      return webApp(
-          createdAt, description, iconImagePath, appName, webUrl, githubUrl);
+      return webApp(createdAt, description, appName, webUrl, githubUrl);
     }
     return orElse();
   }
@@ -944,18 +870,16 @@ abstract class WebAppWork implements Work {
   const factory WebAppWork(
       {required final DateTime createdAt,
       required final String description,
-      required final String iconImagePath,
       required final String appName,
-      required final String webUrl,
+      final String? webUrl,
       required final String githubUrl}) = _$WebAppWork;
 
   @override
   DateTime get createdAt;
   @override
   String get description;
-  String get iconImagePath;
   String get appName;
-  String get webUrl;
+  String? get webUrl;
   @override
   String get githubUrl;
   @override

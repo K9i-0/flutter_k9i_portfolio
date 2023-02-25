@@ -6,7 +6,23 @@ part of 'works.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$worksHash() => r'df9cc70d269521a739bd930a027635f7b4777155';
+String _$worksSortOrderHash() => r'53286dbcdef3b32e8c7df4b8ccf12a04ca94edc5';
+
+/// See also [WorksSortOrder].
+@ProviderFor(WorksSortOrder)
+final worksSortOrderProvider =
+    AutoDisposeNotifierProvider<WorksSortOrder, WorksSortOrderState>.internal(
+  WorksSortOrder.new,
+  name: r'worksSortOrderProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$worksSortOrderHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef _$WorksSortOrder = AutoDisposeNotifier<WorksSortOrderState>;
+String _$worksHash() => r'e4efe9c5f628f6531a96df2ef868436cab8f82aa';
 
 /// See also [works].
 @ProviderFor(works)

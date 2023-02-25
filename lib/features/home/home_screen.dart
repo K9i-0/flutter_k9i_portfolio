@@ -8,6 +8,7 @@ import 'package:flutter_k9i_portfolio/resources/flutter_colors.dart';
 import 'package:flutter_k9i_portfolio/utils/build_context_x.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:intl/intl.dart';
 import 'package:simple_icons/simple_icons.dart';
 import 'package:text_style_preview/text_style_preview.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -45,6 +46,17 @@ class Content extends ConsumerWidget {
             ),
           ),
           actions: [
+            IconButton(
+              icon: Icon(
+                ref.watch(worksSortOrderProvider) ==
+                        WorksSortOrderState.createdAtAsc
+                    ? Icons.arrow_upward
+                    : Icons.arrow_downward,
+              ),
+              onPressed: () {
+                ref.read(worksSortOrderProvider.notifier).toggle();
+              },
+            ),
             IconButton(
               onPressed: () {
                 // ダークとライトの２択で切り替える（シンプルさ重視でsystemは使わない）
@@ -247,7 +259,11 @@ class FlutterPackageWorkItem extends StatelessWidget {
                   ),
                 ),
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
+                    CreateAtText(
+                      createdAt: work.createdAt,
+                    ),
                     const Spacer(),
                     IconButton(
                       onPressed: () => launchUrlString(work.pubDevUrl),
@@ -295,6 +311,14 @@ class MobileAppWorkItem extends StatelessWidget {
         builder: (context) => WorkItemContainer(
           child: Row(
             children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: work.iconImage.image(
+                  width: 66,
+                  height: 66,
+                ),
+              ),
+              const Gap(16),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -313,7 +337,11 @@ class MobileAppWorkItem extends StatelessWidget {
                       ),
                     ),
                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
+                        CreateAtText(
+                          createdAt: work.createdAt,
+                        ),
                         const Spacer(),
                         IconButton(
                           onPressed: () => launchUrlString(work.appStoreUrl),
@@ -354,64 +382,90 @@ class WebAppWorkItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Theme(
       data: ThemeData(
-        colorSchemeSeed: FlutterBrandColors.yellow.color,
+        colorSchemeSeed: FlutterBrandColors.green.color,
         useMaterial3: true,
         brightness: Theme.of(context).brightness,
       ),
       child: Builder(
-          builder: (context) => WorkItemContainer(
-                child: Row(
+        builder: (context) => WorkItemContainer(
+          child: Row(
+            children: [
+              DecoratedBox(
+                decoration: BoxDecoration(
+                  color: context.colorScheme.onPrimaryContainer,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Icon(
+                    Icons.language,
+                    color: context.colorScheme.primaryContainer,
+                    size: 50,
+                  ),
+                ),
+              ),
+              const Gap(16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    DecoratedBox(
-                      decoration: BoxDecoration(
+                    Text(
+                      work.appName,
+                      style: context.textTheme.titleLarge?.apply(
                         color: context.colorScheme.onPrimaryContainer,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8),
-                        child: Icon(
-                          Icons.language,
-                          color: context.colorScheme.primaryContainer,
-                          size: 50,
-                        ),
                       ),
                     ),
-                    const Gap(16),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            work.appName,
-                            style: context.textTheme.titleLarge?.apply(
-                              color: context.colorScheme.onPrimaryContainer,
-                            ),
-                          ),
-                          const Gap(4),
-                          Text(
-                            work.description,
-                            style: context.textTheme.bodyMedium?.apply(
-                              color: context.colorScheme.onPrimaryContainer,
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              const Spacer(),
-                              IconButton(
-                                onPressed: () => launchUrlString(work.webUrl),
-                                icon: Icon(
-                                  SimpleIcons.github,
-                                  color: context.colorScheme.onPrimaryContainer,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
+                    const Gap(4),
+                    Text(
+                      work.description,
+                      style: context.textTheme.bodyMedium?.apply(
+                        color: context.colorScheme.onPrimaryContainer,
                       ),
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        CreateAtText(
+                          createdAt: work.createdAt,
+                        ),
+                        const Spacer(),
+                        IconButton(
+                          onPressed: () => launchUrlString(work.githubUrl),
+                          icon: Icon(
+                            SimpleIcons.github,
+                            color: context.colorScheme.onPrimaryContainer,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
-              )),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CreateAtText extends StatelessWidget {
+  const CreateAtText({
+    super.key,
+    required this.createdAt,
+  });
+
+  final DateTime createdAt;
+
+  @override
+  Widget build(BuildContext context) {
+    final createdAtFormatter = DateFormat.yMMMd();
+
+    return Text(
+      createdAtFormatter.format(createdAt),
+      style: context.textTheme.bodySmall?.apply(
+        color: context.colorScheme.onPrimaryContainer,
+      ),
     );
   }
 }

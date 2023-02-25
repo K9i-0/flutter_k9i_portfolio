@@ -1,4 +1,5 @@
 import 'package:flutter_k9i_portfolio/features/works/works.dart';
+import 'package:flutter_k9i_portfolio/resources/assets.gen.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'works_repository.g.dart';
@@ -30,20 +31,44 @@ class WorksRepository {
       Work.mobileApp(
         createdAt: DateTime(2021, 8, 14),
         description: 'ロック機能のあるブックマーク管理アプリです。',
-        iconImagePath:
-            'https://play-lh.googleusercontent.com/JdIdKgVuXG8eU9Y9qIs1KuQPK623C6mqT_Pj3pV50hMfdt00FWx8lxQdygi9MTtuqA=w240-h480-rw',
+        iconImage: Assets.images.bookmarkSafe,
         appName: 'Bookmark Safe',
-        appStoreUrl: '',
+        appStoreUrl: 'https://apps.apple.com/app/id1584945729',
         googlePlayUrl:
             'https://play.google.com/store/apps/details?id=com.k9i.b72',
-        githubUrl: 'https://github.com/K9i-0/Bookmark-Safe',
+      ),
+      Work.mobileApp(
+        createdAt: DateTime(2020, 6, 6),
+        description: 'T2QTはQRコードの作成に便利なアプリです。',
+        iconImage: Assets.images.t2qr,
+        appName: 'T2QR',
+        appStoreUrl: 'https://apps.apple.com/app/id1518590005',
+        googlePlayUrl:
+            'https://play.google.com/store/apps/details?id=com.kotahayashi.t2qr',
+      ),
+      Work.mobileApp(
+        createdAt: DateTime(2021, 9, 25),
+        description: '画像を選んでオリジナルモンスターを作ろう。',
+        iconImage: Assets.images.pokeMaker,
+        appName: 'Poke Maker',
+        appStoreUrl: 'https://apps.apple.com/app/id1587498140',
+        googlePlayUrl:
+            'https://play.google.com/store/apps/details?id=com.k9i.pokeMaker',
+      ),
+      Work.mobileApp(
+        createdAt: DateTime(2020, 10, 24),
+        description:
+            'Trading Card Summonerはオリジナルのトレーディングカードを作成し、カードを交換するアプリです。',
+        iconImage: Assets.images.tradingCardSummoner,
+        appName: 'Trading Card Summoner',
+        appStoreUrl: 'https://apps.apple.com/app/id1538757499',
+        googlePlayUrl:
+            'https://play.google.com/store/apps/details?id=com.kotahayashi.trading_card_summoner',
       ),
       Work.webApp(
         createdAt: DateTime(2023, 2, 23),
-        description: 'このページです。',
-        iconImagePath: '',
+        description: 'このページです。Githubでソースコードを公開しています。',
         appName: 'K9i\'s Portfolio',
-        webUrl: '',
         githubUrl: 'https://github.com/K9i-0/flutter_k9i_portfolio',
       ),
     ];
