@@ -93,6 +93,7 @@ class Content extends ConsumerWidget {
             ],
           ),
         ),
+        const SliverGap(32),
       ],
     );
   }
@@ -268,8 +269,7 @@ class FlutterPackageWorkItem extends StatelessWidget {
                     IconButton(
                       onPressed: () => launchUrlString(work.pubDevUrl),
                       icon: Icon(
-                        // TODO(K9i-0): pub.devのアイコンにしたい
-                        Icons.language,
+                        SimpleIcons.dart,
                         color: context.colorScheme.onPrimaryContainer,
                       ),
                     ),
