@@ -5,6 +5,7 @@ import 'package:flutter_k9i_portfolio/features/settings/settings.dart';
 import 'package:flutter_k9i_portfolio/features/works/works.dart';
 import 'package:flutter_k9i_portfolio/resources/assets.gen.dart';
 import 'package:flutter_k9i_portfolio/resources/flutter_colors.dart';
+import 'package:flutter_k9i_portfolio/resources/l10n/generated/l10n.dart';
 import 'package:flutter_k9i_portfolio/utils/build_context_x.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -459,11 +460,12 @@ class CreateAtText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final createdAtFormatter = DateFormat.yMMMd();
+    // TODO(K9i-0): 本来はlocaleの指定は不要なので消したい
+    final createdAtFormatter = DateFormat.yMMMd(L10n.of(context).localeName);
 
     return Text(
       createdAtFormatter.format(createdAt),
-      style: context.textTheme.bodySmall?.apply(
+      style: context.textTheme.labelMedium?.apply(
         color: context.colorScheme.onPrimaryContainer,
       ),
     );
