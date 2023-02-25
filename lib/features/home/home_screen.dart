@@ -11,7 +11,6 @@ import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:simple_icons/simple_icons.dart';
-import 'package:text_style_preview/text_style_preview.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class HomeScreen extends ConsumerWidget {
@@ -116,18 +115,14 @@ class Header extends StatelessWidget {
           ),
         ),
         const Gap(16),
-        TextStylePreview(
-          child: Text(
-            "K9i (Kota Hayashi)",
-            style: context.textTheme.headlineMedium,
-          ),
+        Text(
+          "K9i (Kota Hayashi)",
+          style: context.textTheme.headlineMedium,
         ),
         const Gap(8),
-        TextStylePreview(
-          child: Text(
-            "Flutter Developer 💙",
-            style: context.textTheme.bodyMedium,
-          ),
+        Text(
+          "Flutter Developer 💙",
+          style: context.textTheme.bodyMedium,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
