@@ -294,14 +294,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.0"
-  flutter_svg:
-    dependency: transitive
-    description:
-      name: flutter_svg
-      sha256: "97c5b291b4fd34ae4f55d6a4c05841d4d0ed94952e033c5a6529e1b47b4d2a29"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.2"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -392,14 +384,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
-  icons_plus:
-    dependency: "direct main"
-    description:
-      name: icons_plus
-      sha256: b613ec1deac96e9ef5c8065f2d7325967818bc3f4e118a375e50292761849ea6
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.0.0"
   io:
     dependency: transitive
     description:
@@ -496,14 +480,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.2"
-  path_parsing:
-    dependency: transitive
-    description:
-      name: path_parsing
-      sha256: e3e67b1629e6f7e8100b367d3db6ba6af4b1f0bb80f64db18ef1fbabd2fa9ccf
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.1"
   petitparser:
     dependency: transitive
     description:
@@ -616,6 +592,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.3"
+  simple_icons:
+    dependency: "direct main"
+    description:
+      name: simple_icons
+      sha256: "8aa6832dc7a263a3213e40ecbf1328a392308c809d534a3b860693625890483b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.10.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -805,30 +789,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.7"
-  vector_graphics:
-    dependency: transitive
-    description:
-      name: vector_graphics
-      sha256: "254348b40251c995cf8301ac715486c8cfa0a93b7fdc4dbd495a30f04db1fb44"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.0"
-  vector_graphics_codec:
-    dependency: transitive
-    description:
-      name: vector_graphics_codec
-      sha256: "143c290b762646c696c63be5d976bde7379ea892cb6868ddc5a17cbc56e71411"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.0"
-  vector_graphics_compiler:
-    dependency: transitive
-    description:
-      name: vector_graphics_compiler
-      sha256: "3190cc26d9ebda686bafb9721bb6a74c6d358700f4fc978a0f2cba6912daff86"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.0"
   vector_math:
     dependency: transitive
     description:
@@ -879,4 +839,4 @@ packages:
     version: "3.1.1"
 sdks:
   dart: ">=2.19.2 <3.0.0"
-  flutter: ">=3.7.0-0"
+  flutter: ">=3.3.0"
