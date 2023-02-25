@@ -12,12 +12,28 @@ import 'package:flutter/widgets.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/bookmark_safe.png
+  AssetGenImage get bookmarkSafe =>
+      const AssetGenImage('assets/images/bookmark_safe.png');
+
+  /// File path: assets/images/poke_maker.png
+  AssetGenImage get pokeMaker =>
+      const AssetGenImage('assets/images/poke_maker.png');
+
   /// File path: assets/images/profile_icon.jpg
   AssetGenImage get profileIcon =>
       const AssetGenImage('assets/images/profile_icon.jpg');
 
+  /// File path: assets/images/t2qr.png
+  AssetGenImage get t2qr => const AssetGenImage('assets/images/t2qr.png');
+
+  /// File path: assets/images/trading_card_summoner.png
+  AssetGenImage get tradingCardSummoner =>
+      const AssetGenImage('assets/images/trading_card_summoner.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [profileIcon];
+  List<AssetGenImage> get values =>
+      [bookmarkSafe, pokeMaker, profileIcon, t2qr, tradingCardSummoner];
 }
 
 class Assets {
