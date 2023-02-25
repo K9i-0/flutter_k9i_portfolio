@@ -117,7 +117,7 @@ class Header extends StatelessWidget {
         const Gap(16),
         TextStylePreview(
           child: Text(
-            "K9i",
+            "K9i (Kota Hayashi)",
             style: context.textTheme.headlineMedium,
           ),
         ),
