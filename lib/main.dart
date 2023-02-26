@@ -4,10 +4,12 @@ import 'package:flutter_k9i_portfolio/features/settings/settings.dart';
 import 'package:flutter_k9i_portfolio/resources/flutter_colors.dart';
 import 'package:flutter_k9i_portfolio/resources/fonts.gen.dart';
 import 'package:flutter_k9i_portfolio/resources/l10n/generated/l10n.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  setUrlStrategy(PathUrlStrategy());
   runApp(
     const ProviderScope(
       child: MainApp(),
