@@ -95,8 +95,17 @@ class Content extends ConsumerWidget {
                   if (context.mounted) {
                     showLicensePage(
                       context: context,
+                      applicationIcon: Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: ClipOval(
+                          child: Assets.images.profileIcon.image(
+                            width: 100,
+                          ),
+                        ),
+                      ),
                       applicationName: 'K9i\'s Portfolio',
                       applicationVersion: packageInfo.version,
+                      applicationLegalese: '© 2023 K9i',
                     );
                   }
                 },

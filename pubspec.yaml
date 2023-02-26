@@ -33,6 +33,7 @@ dev_dependencies:
   freezed: ^2.3.2
   flutter_gen_runner: ^5.2.0
   flutter_gen: ^5.2.0
+  flutter_native_splash: ^2.2.18
 
 flutter:
   uses-material-design: true
