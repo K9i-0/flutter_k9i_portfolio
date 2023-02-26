@@ -33,6 +33,8 @@ dev_dependencies:
   freezed: ^2.3.2
   flutter_gen_runner: ^5.2.0
   flutter_gen: ^5.2.0
+  flutter_native_splash: ^2.2.18
+  flutter_launcher_icons: ^0.12.0
 
 flutter:
   uses-material-design: true
@@ -52,3 +54,12 @@ flutter:
 # flutter_genの生成場所を変更
 flutter_gen:
   output: lib/resources
+
+flutter_icons:
+  image_path: "assets/icons/app_icon.png"
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  web:
+    generate: true
+    image_path: "assets/icons/app_icon.png"

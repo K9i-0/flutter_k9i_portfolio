@@ -49,6 +49,7 @@ class Content extends ConsumerWidget {
           ),
           actions: [
             IconButton(
+              tooltip: '並び替え',
               icon: Icon(
                 ref.watch(worksSortOrderProvider) ==
                         WorksSortOrderState.createdAtAsc
@@ -60,6 +61,7 @@ class Content extends ConsumerWidget {
               },
             ),
             IconButton(
+              tooltip: 'テーマ変更',
               onPressed: () {
                 // ダークとライトの２択で切り替える（シンプルさ重視でsystemは使わない）
                 if (Theme.of(context).brightness == Brightness.light) {
@@ -95,8 +97,17 @@ class Content extends ConsumerWidget {
                   if (context.mounted) {
                     showLicensePage(
                       context: context,
+                      applicationIcon: Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: ClipOval(
+                          child: Assets.images.profileIcon.image(
+                            width: 100,
+                          ),
+                        ),
+                      ),
                       applicationName: 'K9i\'s Portfolio',
                       applicationVersion: packageInfo.version,
+                      applicationLegalese: '© 2023 K9i',
                     );
                   }
                 },
@@ -135,22 +146,26 @@ class Header extends StatelessWidget {
           "Flutter Developer 💙",
           style: context.textTheme.bodyMedium,
         ),
+        const Gap(8),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             IconButton(
+              tooltip: 'Twitterを開く',
               onPressed: () => launchUrlString('https://twitter.com/K9i_apps'),
               icon: const Icon(
                 SimpleIcons.twitter,
               ),
             ),
             IconButton(
+              tooltip: 'Githubを開く',
               onPressed: () => launchUrlString('https://github.com/K9i-0'),
               icon: const Icon(
                 SimpleIcons.github,
               ),
             ),
             IconButton(
+              tooltip: 'Zennを開く',
               onPressed: () => launchUrlString('https://zenn.dev/k9i'),
               icon: const Icon(
                 SimpleIcons.zenn,
@@ -274,6 +289,7 @@ class FlutterPackageWorkItem extends StatelessWidget {
                     ),
                     const Spacer(),
                     IconButton(
+                      tooltip: 'Pub.devを開く',
                       onPressed: () => launchUrlString(work.pubDevUrl),
                       icon: Icon(
                         SimpleIcons.dart,
@@ -281,6 +297,7 @@ class FlutterPackageWorkItem extends StatelessWidget {
                       ),
                     ),
                     IconButton(
+                      tooltip: 'Githubを開く',
                       onPressed: () => launchUrlString(work.githubUrl),
                       icon: Icon(
                         SimpleIcons.github,
@@ -347,6 +364,7 @@ class MobileAppWorkItem extends StatelessWidget {
                         ),
                         const Spacer(),
                         IconButton(
+                          tooltip: 'App Storeを開く',
                           onPressed: () => launchUrlString(work.appStoreUrl),
                           icon: Icon(
                             SimpleIcons.appstore,
@@ -354,6 +372,7 @@ class MobileAppWorkItem extends StatelessWidget {
                           ),
                         ),
                         IconButton(
+                          tooltip: 'Google Playを開く',
                           onPressed: () => launchUrlString(work.googlePlayUrl),
                           icon: Icon(
                             SimpleIcons.googleplay,
@@ -429,6 +448,7 @@ class WebAppWorkItem extends StatelessWidget {
                         ),
                         const Spacer(),
                         IconButton(
+                          tooltip: 'Githubを開く',
                           onPressed: () => launchUrlString(work.githubUrl),
                           icon: Icon(
                             SimpleIcons.github,

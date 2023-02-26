@@ -1,3 +1,3 @@
 # flutter_k9i_portfolio
 
-A new Flutter project.
+K9i(Kota Hayashi)のポートフォリオページです。Flutter Webで作ってます。
