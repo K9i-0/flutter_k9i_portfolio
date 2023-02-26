@@ -31,6 +31,7 @@ dev_dependencies:
   build_runner: ^2.3.3
   freezed: ^2.3.2
   flutter_gen_runner: ^5.2.0
+  flutter_gen: ^5.2.0
 
 flutter:
   uses-material-design: true
@@ -38,6 +39,14 @@ flutter:
 
   assets:
   - assets/images/
+
+  fonts:
+  - family: NotoSansJP
+    fonts:
+      - asset: assets/fonts/NotoSansJP-Regular.otf
+  - family: NotoColorEmoji
+    fonts:
+      - asset: assets/fonts/NotoColorEmoji-Regular.ttf
 
 # flutter_genの生成場所を変更
 flutter_gen:

@@ -5,6 +5,7 @@ import 'package:flutter_k9i_portfolio/features/settings/settings.dart';
 import 'package:flutter_k9i_portfolio/features/works/works.dart';
 import 'package:flutter_k9i_portfolio/resources/assets.gen.dart';
 import 'package:flutter_k9i_portfolio/resources/flutter_colors.dart';
+import 'package:flutter_k9i_portfolio/resources/fonts.gen.dart';
 import 'package:flutter_k9i_portfolio/resources/l10n/generated/l10n.dart';
 import 'package:flutter_k9i_portfolio/utils/build_context_x.dart';
 import 'package:gap/gap.dart';
@@ -298,11 +299,7 @@ class MobileAppWorkItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: ThemeData(
-        colorSchemeSeed: FlutterBrandColors.red.color,
-        useMaterial3: true,
-        brightness: Theme.of(context).brightness,
-      ),
+      data: context.genTheme(colorSchemeSeed: FlutterBrandColors.red.color),
       child: Builder(
         builder: (context) => WorkItemContainer(
           child: Row(
@@ -377,11 +374,7 @@ class WebAppWorkItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: ThemeData(
-        colorSchemeSeed: FlutterBrandColors.green.color,
-        useMaterial3: true,
-        brightness: Theme.of(context).brightness,
-      ),
+      data: context.genTheme(colorSchemeSeed: FlutterBrandColors.green.color),
       child: Builder(
         builder: (context) => WorkItemContainer(
           child: Row(
@@ -463,6 +456,18 @@ class CreateAtText extends StatelessWidget {
       style: context.textTheme.labelMedium?.apply(
         color: context.colorScheme.onPrimaryContainer,
       ),
+    );
+  }
+}
+
+extension _ThemeDataX on BuildContext {
+  ThemeData genTheme({required Color colorSchemeSeed}) {
+    return ThemeData(
+      colorSchemeSeed: colorSchemeSeed,
+      useMaterial3: true,
+      brightness: Theme.of(this).brightness,
+      fontFamily: FontFamily.notoSansJP,
+      fontFamilyFallback: const [FontFamily.notoColorEmoji],
     );
   }
 }
