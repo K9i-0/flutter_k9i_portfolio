@@ -97,6 +97,7 @@ class Content extends ConsumerWidget {
                       context: context,
                       applicationName: 'K9i\'s Portfolio',
                       applicationVersion: packageInfo.version,
+                      useRootNavigator: true,
                     );
                   }
                 },
