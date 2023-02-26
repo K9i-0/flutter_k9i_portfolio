@@ -9,7 +9,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  setUrlStrategy(PathUrlStrategy());
+  usePathUrlStrategy();
+
   runApp(
     const ProviderScope(
       child: MainApp(),
