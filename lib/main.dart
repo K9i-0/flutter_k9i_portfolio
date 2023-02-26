@@ -37,7 +37,10 @@ class MainApp extends ConsumerWidget {
       themeMode: ref.watch(settingsProvider.select((value) => value.themeMode)),
       localizationsDelegates: L10n.localizationsDelegates,
       supportedLocales: L10n.supportedLocales,
-      home: const HomeScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreen(),
+      },
       debugShowCheckedModeBanner: false,
     );
   }
