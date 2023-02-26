@@ -1,11 +1,11 @@
 {
-    "name": "flutter_k9i_portfolio",
-    "short_name": "flutter_k9i_portfolio",
+    "name": "K9i's Portfolio",
+    "short_name": "K9i",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "K9i(Kota Hayashi)のポートフォリオページです。Flutter Webで作ってます。",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

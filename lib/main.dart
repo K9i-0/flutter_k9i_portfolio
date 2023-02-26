@@ -21,6 +21,7 @@ class MainApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
+      title: 'K9i\'s Portfolio',
       theme: ThemeData(
         useMaterial3: true,
         colorSchemeSeed: FlutterBrandColors.flutterBlue.color,
