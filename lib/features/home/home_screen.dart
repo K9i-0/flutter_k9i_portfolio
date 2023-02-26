@@ -93,10 +93,14 @@ class Content extends ConsumerWidget {
                   final packageInfo = await PackageInfo.fromPlatform();
 
                   if (context.mounted) {
-                    showLicensePage(
+                    showModalBottomSheet(
                       context: context,
-                      applicationName: 'K9i\'s Portfolio',
-                      applicationVersion: packageInfo.version,
+                      builder: (context) {
+                        return LicensePage(
+                          applicationName: 'K9i\'s Portfolio',
+                          applicationVersion: packageInfo.version,
+                        );
+                      },
                     );
                   }
                 },
