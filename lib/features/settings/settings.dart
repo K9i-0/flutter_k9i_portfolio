@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_k9i_portfolio/features/settings/settings_repository.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -16,12 +17,13 @@ class SettingsState with _$SettingsState {
 class Settings extends _$Settings {
   @override
   SettingsState build() {
-    return const SettingsState(
-      themeMode: ThemeMode.system,
+    return SettingsState(
+      themeMode: ref.watch(settingsRepositoryProvider).themeMode,
     );
   }
 
-  void setThemeMode(ThemeMode themeMode) {
+  Future<void> setThemeMode(ThemeMode themeMode) async {
+    await ref.read(settingsRepositoryProvider).setThemeMode(themeMode);
     state = state.copyWith(themeMode: themeMode);
   }
 }

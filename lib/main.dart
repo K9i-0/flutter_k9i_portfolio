@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_k9i_portfolio/common/shared_preferences.dart';
 import 'package:flutter_k9i_portfolio/features/home/home_screen.dart';
 import 'package:flutter_k9i_portfolio/features/settings/settings.dart';
 import 'package:flutter_k9i_portfolio/resources/flutter_colors.dart';
 import 'package:flutter_k9i_portfolio/resources/fonts.gen.dart';
 import 'package:flutter_k9i_portfolio/resources/l10n/generated/l10n.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  final sharedPreferences = await SharedPreferences.getInstance();
+
   runApp(
-    const ProviderScope(
-      child: MainApp(),
+    ProviderScope(
+      overrides: [
+        sharedPreferencesProvider.overrideWithValue(sharedPreferences),
+      ],
+      child: const MainApp(),
     ),
   );
 }
