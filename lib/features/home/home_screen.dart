@@ -13,7 +13,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:simple_icons/simple_icons.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+import 'package:url_launcher/link.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({
@@ -89,6 +89,7 @@ class Content extends ConsumerWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // TODO(K9i-0): Navigator 2.0対応してリンク化するのが理想かも？
               TextButton(
                 child: const Text('Powered by Flutter'),
                 onPressed: () async {
@@ -150,25 +151,37 @@ class Header extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            IconButton(
-              tooltip: 'Twitterを開く',
-              onPressed: () => launchUrlString('https://twitter.com/K9i_apps'),
-              icon: const Icon(
-                SimpleIcons.twitter,
+            Link(
+              uri: Uri.parse('https://twitter.com/K9i_apps'),
+              target: LinkTarget.blank,
+              builder: (context, followLink) => IconButton(
+                tooltip: 'Twitterを開く',
+                onPressed: followLink,
+                icon: const Icon(
+                  SimpleIcons.twitter,
+                ),
               ),
             ),
-            IconButton(
-              tooltip: 'Githubを開く',
-              onPressed: () => launchUrlString('https://github.com/K9i-0'),
-              icon: const Icon(
-                SimpleIcons.github,
+            Link(
+              uri: Uri.parse('https://github.com/K9i-0'),
+              target: LinkTarget.blank,
+              builder: (context, followLink) => IconButton(
+                tooltip: 'Githubを開く',
+                onPressed: followLink,
+                icon: const Icon(
+                  SimpleIcons.github,
+                ),
               ),
             ),
-            IconButton(
-              tooltip: 'Zennを開く',
-              onPressed: () => launchUrlString('https://zenn.dev/k9i'),
-              icon: const Icon(
-                SimpleIcons.zenn,
+            Link(
+              uri: Uri.parse('https://zenn.dev/k9i'),
+              target: LinkTarget.blank,
+              builder: (context, followLink) => IconButton(
+                tooltip: 'Zennを開く',
+                onPressed: followLink,
+                icon: const Icon(
+                  SimpleIcons.zenn,
+                ),
               ),
             ),
           ],
@@ -288,20 +301,28 @@ class FlutterPackageWorkItem extends StatelessWidget {
                       createdAt: work.createdAt,
                     ),
                     const Spacer(),
-                    IconButton(
-                      tooltip: 'Pub.devを開く',
-                      onPressed: () => launchUrlString(work.pubDevUrl),
-                      icon: Icon(
-                        SimpleIcons.dart,
-                        color: context.colorScheme.onPrimaryContainer,
+                    Link(
+                      uri: Uri.parse(work.pubDevUrl),
+                      target: LinkTarget.blank,
+                      builder: (context, followLink) => IconButton(
+                        tooltip: 'Pub.devを開く',
+                        onPressed: followLink,
+                        icon: Icon(
+                          SimpleIcons.dart,
+                          color: context.colorScheme.onPrimaryContainer,
+                        ),
                       ),
                     ),
-                    IconButton(
-                      tooltip: 'Githubを開く',
-                      onPressed: () => launchUrlString(work.githubUrl),
-                      icon: Icon(
-                        SimpleIcons.github,
-                        color: context.colorScheme.onPrimaryContainer,
+                    Link(
+                      uri: Uri.parse(work.githubUrl),
+                      target: LinkTarget.blank,
+                      builder: (context, followLink) => IconButton(
+                        tooltip: 'Githubを開く',
+                        onPressed: followLink,
+                        icon: Icon(
+                          SimpleIcons.github,
+                          color: context.colorScheme.onPrimaryContainer,
+                        ),
                       ),
                     ),
                   ],
@@ -363,20 +384,28 @@ class MobileAppWorkItem extends StatelessWidget {
                           createdAt: work.createdAt,
                         ),
                         const Spacer(),
-                        IconButton(
-                          tooltip: 'App Storeを開く',
-                          onPressed: () => launchUrlString(work.appStoreUrl),
-                          icon: Icon(
-                            SimpleIcons.appstore,
-                            color: context.colorScheme.onPrimaryContainer,
+                        Link(
+                          uri: Uri.parse(work.appStoreUrl),
+                          target: LinkTarget.blank,
+                          builder: (context, followLink) => IconButton(
+                            tooltip: 'App Storeを開く',
+                            onPressed: followLink,
+                            icon: Icon(
+                              SimpleIcons.appstore,
+                              color: context.colorScheme.onPrimaryContainer,
+                            ),
                           ),
                         ),
-                        IconButton(
-                          tooltip: 'Google Playを開く',
-                          onPressed: () => launchUrlString(work.googlePlayUrl),
-                          icon: Icon(
-                            SimpleIcons.googleplay,
-                            color: context.colorScheme.onPrimaryContainer,
+                        Link(
+                          uri: Uri.parse(work.googlePlayUrl),
+                          target: LinkTarget.blank,
+                          builder: (context, followLink) => IconButton(
+                            tooltip: 'Google Playを開く',
+                            onPressed: followLink,
+                            icon: Icon(
+                              SimpleIcons.googleplay,
+                              color: context.colorScheme.onPrimaryContainer,
+                            ),
                           ),
                         ),
                       ],
@@ -447,12 +476,15 @@ class WebAppWorkItem extends StatelessWidget {
                           createdAt: work.createdAt,
                         ),
                         const Spacer(),
-                        IconButton(
-                          tooltip: 'Githubを開く',
-                          onPressed: () => launchUrlString(work.githubUrl),
-                          icon: Icon(
-                            SimpleIcons.github,
-                            color: context.colorScheme.onPrimaryContainer,
+                        Link(
+                          uri: Uri.parse(work.githubUrl),
+                          builder: (context, followLink) => IconButton(
+                            tooltip: 'Githubを開く',
+                            onPressed: followLink,
+                            icon: Icon(
+                              SimpleIcons.github,
+                              color: context.colorScheme.onPrimaryContainer,
+                            ),
                           ),
                         ),
                       ],
