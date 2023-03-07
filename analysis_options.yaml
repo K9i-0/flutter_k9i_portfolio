@@ -4,3 +4,13 @@ analyzer:
     - custom_lint
   errors:
     todo: ignore
+    # https://pub.dev/packages/freezed#disabling-invalid_annotation_target-warning-and-warning-in-generates-files
+    invalid_annotation_target: ignore
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+linter:
+  rules:
+    prefer_single_quotes: true
+    always_use_package_imports: true

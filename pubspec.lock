@@ -405,6 +405,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.0"
+  grinder:
+    dependency: "direct dev"
+    description:
+      name: grinder
+      sha256: "1dabcd70f0d3975f9143d0cebf48a09cf56d4f5e0922f1d1931781e1047c8d00"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.9.3"
   hooks_riverpod:
     dependency: "direct main"
     description:

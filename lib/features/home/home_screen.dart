@@ -139,12 +139,12 @@ class Header extends StatelessWidget {
         ),
         const Gap(16),
         Text(
-          "K9i (Kota Hayashi)",
+          'K9i (Kota Hayashi)',
           style: context.textTheme.headlineMedium,
         ),
         const Gap(8),
         Text(
-          "Flutter Developer 💙",
+          'Flutter Developer 💙',
           style: context.textTheme.bodyMedium,
         ),
         const Gap(8),
