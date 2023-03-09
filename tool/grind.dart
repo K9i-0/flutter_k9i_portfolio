@@ -41,13 +41,13 @@ void l10n() {
   _runCommand(command: 'flutter gen-l10n');
 }
 
-@Task('server alias')
-void s() => server();
+@Task('serveWeb alias')
+void s() => serveWeb();
 
 // ローカルネットワークでアクセスできるようにする
 // https://zenn.dev/toridori/articles/673cfe00628bb4
 @Task('flutter run -d web-server --web-hostname=0.0.0.0 --web-port=50505')
-void server() {
+void serveWeb() {
   final result = Process.runSync('ifconfig', [], runInShell: true);
   if (result.exitCode != 0) {
     throw Exception(
