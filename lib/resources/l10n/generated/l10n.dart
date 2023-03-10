@@ -1,5 +1,5 @@
 /// GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: always_use_package_imports
+// ignore_for_file: always_use_package_imports, noop_primitive_operations, use_super_parameters, avoid_escaping_inner_quotes
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';

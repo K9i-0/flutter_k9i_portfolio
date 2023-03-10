@@ -13,8 +13,8 @@ Future<void> _runCommand({
     splittedCommand.first,
     splittedCommand.sublist(1),
   );
-  stdout.addStream(process.stdout);
-  stderr.addStream(process.stderr);
+  await stdout.addStream(process.stdout);
+  await stderr.addStream(process.stderr);
 }
 
 @Task('build alias')
@@ -51,11 +51,11 @@ void serveWeb() {
   final result = Process.runSync('ifconfig', [], runInShell: true);
   if (result.exitCode != 0) {
     throw Exception(
-        'ifconfig command failed with exit code ${result.exitCode}');
+        'ifconfig command failed with exit code ${result.exitCode}',);
   }
   final output = result.stdout.toString();
   final lines = output.split('\n');
-  for (var line in lines) {
+  for (final line in lines) {
     if (line.contains('inet ') && !line.contains('127.0.0.1')) {
       final ip = line.split(' ')[1];
       log(ip);

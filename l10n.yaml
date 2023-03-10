@@ -5,4 +5,4 @@ output-class: L10n
 output-dir: lib/resources/l10n/generated
 output-localization-file: l10n.dart
 nullable-getter: false
-header: "/// GENERATED CODE - DO NOT MODIFY BY HAND\n// ignore_for_file: always_use_package_imports"
+header: "/// GENERATED CODE - DO NOT MODIFY BY HAND\n// ignore_for_file: always_use_package_imports, noop_primitive_operations, use_super_parameters, avoid_escaping_inner_quotes"

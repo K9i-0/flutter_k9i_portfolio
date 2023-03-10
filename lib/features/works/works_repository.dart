@@ -68,7 +68,7 @@ class WorksRepository {
       Work.webApp(
         createdAt: DateTime(2023, 2, 23),
         description: 'このページです。Githubでソースコードを公開しています。',
-        appName: 'K9i\'s Portfolio',
+        appName: "K9i's Portfolio",
         githubUrl: 'https://github.com/K9i-0/flutter_k9i_portfolio',
       ),
     ];

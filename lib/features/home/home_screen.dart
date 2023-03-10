@@ -106,7 +106,7 @@ class Content extends ConsumerWidget {
                           ),
                         ),
                       ),
-                      applicationName: 'K9i\'s Portfolio',
+                      applicationName: "K9i's Portfolio",
                       applicationVersion: packageInfo.version,
                       applicationLegalese: '© 2023 K9i',
                     );
@@ -205,7 +205,7 @@ class WorkList extends ConsumerWidget {
       sliver: SliverList(
         delegate: SliverChildBuilderDelegate(
           (context, index) {
-            final int itemIndex = index ~/ 2;
+            final itemIndex = index ~/ 2;
             if (index.isEven) {
               final work = works[itemIndex];
               return work.map(

@@ -10,8 +10,8 @@ SettingsRepository settingsRepository(SettingsRepositoryRef ref) =>
     SettingsRepository(ref);
 
 class SettingsRepository {
-  final Ref _ref;
   const SettingsRepository(this._ref);
+  final Ref _ref;
 
   ThemeMode get themeMode {
     final themeModeIndex = _ref
