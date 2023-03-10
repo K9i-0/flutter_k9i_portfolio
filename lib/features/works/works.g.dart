@@ -20,7 +20,7 @@ final worksProvider = AutoDisposeProvider<List<Work>>.internal(
 );
 
 typedef WorksRef = AutoDisposeProviderRef<List<Work>>;
-String _$worksSortOrderHash() => r'53286dbcdef3b32e8c7df4b8ccf12a04ca94edc5';
+String _$worksSortOrderHash() => r'21f3dc201175abfefc84b8ae0b89a1d2d4ad0bc4';
 
 /// See also [WorksSortOrder].
 @ProviderFor(WorksSortOrder)
