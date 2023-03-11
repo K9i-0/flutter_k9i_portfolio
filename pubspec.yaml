@@ -24,6 +24,7 @@ dependencies:
   url_launcher: ^6.1.10
 
 dev_dependencies:
+  altive_lints: any
   build_runner: ^2.3.3
   custom_lint: ^0.3.2
   flutter_gen: ^5.2.0

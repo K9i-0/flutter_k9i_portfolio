@@ -1,4 +1,6 @@
-include: all_lint_rules.yaml
+# 全Lintルールの有効化
+# https://pub.dev/packages/altive_lints
+include: package:altive_lints/all_lint_rules.yaml
 analyzer:
   plugins:
     - custom_lint
