@@ -18,3 +18,15 @@ Riverpodリポジトリを参考にしたanalysis_options.yamlの設定を行っ
 
 [RiverpodリポジトリのLintルールが面白かった](https://zenn.dev/toridori/articles/711eb36d6a27e9)
 
+### l10n.yaml
+[Flutter標準の多言語対応](https://docs.flutter.dev/development/accessibility-and-localization/internationalization
+)をする際に、設定を変更できる[l10n.yaml](https://github.com/K9i-0/flutter_k9i_portfolio/blob/main/l10n.yaml)を工夫しています。
+
+
+### riverpod_generatorのオプション設定
+
+[build.yaml](https://github.com/K9i-0/flutter_k9i_portfolio/blob/main/build.yaml)にriverpod_generatorのオプションを設定しています。
+
+[riverpod_generatorで生成されるProvider名を変える方法](https://zenn.dev/toridori/articles/eeee255bd555a2)
+
+
