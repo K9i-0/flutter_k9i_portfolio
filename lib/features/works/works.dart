@@ -41,7 +41,9 @@ enum WorksSortOrderState {
 @riverpod
 class WorksSortOrder extends _$WorksSortOrder {
   @override
-  WorksSortOrderState build() => WorksSortOrderState.createdAtDesc;
+  WorksSortOrderState build() {
+    return WorksSortOrderState.createdAtDesc;
+  }
 
   void toggle() {
     state = state == WorksSortOrderState.createdAtDesc

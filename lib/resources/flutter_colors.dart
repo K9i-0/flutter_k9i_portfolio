@@ -10,6 +10,6 @@ enum FlutterBrandColors {
   purple(Color(0xFF6200EE)),
   green(Color(0xFF1CDAC5));
 
-  final Color color;
   const FlutterBrandColors(this.color);
+  final Color color;
 }
