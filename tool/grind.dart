@@ -101,6 +101,9 @@ void updatePods() {
   );
 }
 
+@Task('commitMessage alias')
+void c() => commitMessage();
+
 @Task('コミットメッセージを生成する')
 Future<void> commitMessage() async {
   final diffCommandResult = Process.runSync('git', ['diff'], runInShell: true);
@@ -120,7 +123,18 @@ Future<void> commitMessage() async {
     model: 'gpt-3.5-turbo',
     messages: [
       OpenAIChatCompletionChoiceMessageModel(
-        content: '以下のdiffから妥当な日本語のコミットメッセージを考えてください。メッセージは一行でお願いします。\n\n$diff',
+        content: '''
+あなたはgitのコミットメッセージを考えるアシスタントです。gitの差分を入力されたら、そこからコミットメッセージを考えてください。
+
+考慮事項
+- 日本語でお願いします
+- できるだけ短くて、わかりやすいメッセージをお願いします
+- 返答はコミットメッセージの内容をそのまま返してください
+''',
+        role: 'system',
+      ),
+      OpenAIChatCompletionChoiceMessageModel(
+        content: diff,
         role: 'user',
       ),
     ],
