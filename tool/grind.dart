@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:dart_openai/openai.dart';
+import 'package:dotenv/dotenv.dart';
 import 'package:grinder/grinder.dart';
 
 void main(List<String> args) => grind(args);
@@ -51,7 +53,8 @@ void serveWeb() {
   final result = Process.runSync('ifconfig', [], runInShell: true);
   if (result.exitCode != 0) {
     throw Exception(
-        'ifconfig command failed with exit code ${result.exitCode}',);
+      'ifconfig command failed with exit code ${result.exitCode}',
+    );
   }
   final output = result.stdout.toString();
   final lines = output.split('\n');
@@ -95,5 +98,52 @@ void updatePods() {
     'pod',
     arguments: ['install', '--repo-update'],
     workingDirectory: 'ios',
+  );
+}
+
+@Task('commitMessage alias')
+void c() => commitMessage();
+
+@Task('コミットメッセージを生成する')
+Future<void> commitMessage() async {
+  final diffCommandResult = Process.runSync('git', ['diff'], runInShell: true);
+  if (diffCommandResult.exitCode != 0) {
+    throw Exception(
+      'git diff command failed with exit code ${diffCommandResult.exitCode}',
+    );
+  }
+  final diff = diffCommandResult.stdout.toString();
+  log(diff);
+
+  // .envファイルを読み込む
+  final env = DotEnv()..load();
+  final apiKey = env['OPEN_AI_API_KEY']!;
+  OpenAI.apiKey = apiKey;
+  final chatGptResult = await OpenAI.instance.chat.create(
+    model: 'gpt-3.5-turbo',
+    messages: [
+      OpenAIChatCompletionChoiceMessageModel(
+        content: '''
+あなたはgitのコミットメッセージを考えるアシスタントです。gitの差分を入力されたら、そこからコミットメッセージを考えてください。
+
+考慮事項
+- 日本語でお願いします
+- できるだけ短くて、わかりやすいメッセージをお願いします
+- 返答はコミットメッセージの内容をそのまま返してください
+''',
+        role: 'system',
+      ),
+      OpenAIChatCompletionChoiceMessageModel(
+        content: diff,
+        role: 'user',
+      ),
+    ],
+  );
+  final commitMessage = chatGptResult.choices.first.message.content;
+  log(commitMessage);
+  await Process.run(
+    'zsh',
+    ['-c', 'echo $commitMessage | pbcopy'],
+    runInShell: true,
   );
 }
