@@ -27,6 +27,8 @@ dev_dependencies:
   altive_lints: any
   build_runner: ^2.3.3
   custom_lint: ^0.3.2
+  dart_openai: ^1.8.0
+  dotenv: ^4.1.0
   flutter_gen: ^5.2.0
   flutter_gen_runner: ^5.2.0
   flutter_launcher_icons: ^0.12.0
