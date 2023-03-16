@@ -28,9 +28,17 @@ class WorksRepository {
         pubDevUrl: 'https://pub.dev/packages/text_style_preview',
         githubUrl: 'https://github.com/K9i-0/text_style_preview',
       ),
+      Work.flutterPackage(
+        createdAt: DateTime(2023, 3, 15),
+        description:
+            'SimpleLoadingDialog: A seamless full-screen loading dialog for Flutter. Efficiently manage actions while awaiting Futures, and easily customize with Widgets and ThemeExtension.',
+        packageName: 'simple_loading_dialog',
+        pubDevUrl: 'https://pub.dev/packages/simple_loading_dialog',
+        githubUrl: 'https://github.com/K9i-0/simple_loading_dialog',
+      ),
       Work.mobileApp(
         createdAt: DateTime(2021, 8, 14),
-        description: 'ロック機能のあるブックマーク管理アプリです。',
+        description: '秘密のブックマークを安全に管理、クラウド同期、サムネイル画像、ブラウザ使い分け機能付き。',
         iconImage: Assets.images.bookmarkSafe,
         appName: 'Bookmark Safe',
         appStoreUrl: 'https://apps.apple.com/app/id1584945729',
@@ -39,7 +47,7 @@ class WorksRepository {
       ),
       Work.mobileApp(
         createdAt: DateTime(2020, 6, 6),
-        description: 'T2QTはQRコードの作成に便利なアプリです。',
+        description: 'QRコードを自在に使いこなす！読み取り・作成・カスタマイズ・履歴機能付き。',
         iconImage: Assets.images.t2qr,
         appName: 'T2QR',
         appStoreUrl: 'https://apps.apple.com/app/id1518590005',
