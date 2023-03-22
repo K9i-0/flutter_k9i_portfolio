@@ -13,5 +13,11 @@ class L10nEn extends L10n {
   String get appName => 'K9i\'s Portfolio';
 
   @override
-  String get test => 'test';
+  String get routeErrorScreenTitle => 'Page not found';
+
+  @override
+  String get routeErrorScreenMessage => ' The page you are looking for does not exist.';
+
+  @override
+  String get routeErrorScreenBackToHome => 'Back to home';
 }

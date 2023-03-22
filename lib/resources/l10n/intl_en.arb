@@ -1,5 +1,7 @@
 {
     "@@locale": "en",
     "appName": "K9i's Portfolio",
-    "test": "test"
+    "routeErrorScreenTitle": "Page not found",
+    "routeErrorScreenMessage": " The page you are looking for does not exist.",
+    "routeErrorScreenBackToHome": "Back to home"
 }
