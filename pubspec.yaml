@@ -1,10 +1,10 @@
 name: flutter_k9i_portfolio
 description: A new Flutter project.
 publish_to: "none"
-version: 0.2.1
+version: 0.2.2
 
 environment:
-  sdk: ">=2.19.4 <3.0.0"
+  sdk: ">=2.19.5 <3.0.0"
 
 dependencies:
   flutter:
@@ -21,7 +21,7 @@ dependencies:
   intl: ^0.17.0
   package_info_plus: ^3.0.3
   riverpod_annotation: ^2.0.2
-  shared_preferences: ^2.0.18
+  shared_preferences: ^2.0.20
   simple_icons: ^7.10.0
   text_style_preview: ^0.1.4
   url_launcher: ^6.1.10
@@ -30,7 +30,7 @@ dev_dependencies:
   altive_lints: any
   build_runner: ^2.3.3
   custom_lint: ^0.3.2
-  dart_openai: ^1.8.0
+  dart_openai: ^1.8.4
   dotenv: ^4.1.0
   flutter_gen: ^5.2.0
   flutter_gen_runner: ^5.2.0
