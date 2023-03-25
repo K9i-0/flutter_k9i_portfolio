@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: wasabeef/import-asdf-tool-versions-action@v1
+      - uses: wasabeef/import-asdf-tool-versions-action@v1.0.1
         id: asdf
       - uses: subosito/flutter-action@v2
         with:
@@ -24,7 +24,7 @@ jobs:
       - run: dart pub global activate custom_lint
 
       - name: Run analyzer
-        uses: invertase/github-action-dart-analyzer@v1.0.1
+        uses: invertase/github-action-dart-analyzer@v1
         with:
           fatal-infos: true
           fatal-warnings: true
