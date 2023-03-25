@@ -11,7 +11,6 @@ import 'package:flutter_k9i_portfolio/utils/build_context_x.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 import 'package:simple_icons/simple_icons.dart';
 import 'package:url_launcher/link.dart';
 
@@ -89,29 +88,13 @@ class Content extends ConsumerWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // TODO(K9i-0): Navigator 2.0対応してリンク化するのが理想かも？
-              TextButton(
-                child: const Text('Powered by Flutter'),
-                onPressed: () async {
-                  final packageInfo = await PackageInfo.fromPlatform();
-
-                  if (context.mounted) {
-                    showLicensePage(
-                      context: context,
-                      applicationIcon: Padding(
-                        padding: const EdgeInsets.all(16),
-                        child: ClipOval(
-                          child: Assets.images.profileIcon.image(
-                            width: 100,
-                          ),
-                        ),
-                      ),
-                      applicationName: "K9i's Portfolio",
-                      applicationVersion: packageInfo.version,
-                      applicationLegalese: '© 2023 K9i',
-                    );
-                  }
-                },
+              Link(
+                uri: Uri.parse('/license'),
+                target: LinkTarget.blank,
+                builder: (context, followLink) => TextButton(
+                  onPressed: followLink,
+                  child: const Text('Powered by Flutter'),
+                ),
               ),
             ],
           ),

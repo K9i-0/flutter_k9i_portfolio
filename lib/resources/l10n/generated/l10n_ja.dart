@@ -13,5 +13,11 @@ class L10nJa extends L10n {
   String get appName => 'K9i\'s Portfolio';
 
   @override
-  String get test => 'テスト';
+  String get routeErrorScreenTitle => 'お探しのページが見つかりませんでした';
+
+  @override
+  String get routeErrorScreenMessage => 'アクセスしようとしたページは削除、変更されたか、現在利用できない可能性があります。\nお手数をおかけしますが、ホーム画面に戻っていただきますようお願いいたします。';
+
+  @override
+  String get routeErrorScreenBackToHome => 'ホームに戻る';
 }

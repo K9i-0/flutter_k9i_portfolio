@@ -1,5 +1,7 @@
 {
     "@@locale": "ja",
     "appName": "K9i's Portfolio",
-    "test": "テスト"
+    "routeErrorScreenTitle": "お探しのページが見つかりませんでした",
+    "routeErrorScreenMessage": "アクセスしようとしたページは削除、変更されたか、現在利用できない可能性があります。\nお手数をおかけしますが、ホーム画面に戻っていただきますようお願いいたします。",
+    "routeErrorScreenBackToHome": "ホームに戻る"
 }

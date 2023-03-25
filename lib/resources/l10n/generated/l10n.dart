@@ -103,11 +103,23 @@ abstract class L10n {
   /// **'K9i\'s Portfolio'**
   String get appName;
 
-  /// No description provided for @test.
+  /// No description provided for @routeErrorScreenTitle.
   ///
   /// In en, this message translates to:
-  /// **'test'**
-  String get test;
+  /// **'Page not found'**
+  String get routeErrorScreenTitle;
+
+  /// No description provided for @routeErrorScreenMessage.
+  ///
+  /// In en, this message translates to:
+  /// **' The page you are looking for does not exist.'**
+  String get routeErrorScreenMessage;
+
+  /// No description provided for @routeErrorScreenBackToHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to home'**
+  String get routeErrorScreenBackToHome;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {
