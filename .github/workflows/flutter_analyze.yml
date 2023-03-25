@@ -24,7 +24,7 @@ jobs:
       - run: dart pub global activate custom_lint
 
       - name: Run analyzer
-        uses: invertase/github-action-dart-analyzer@v1
+        uses: invertase/github-action-dart-analyzer@v1.0.1
         with:
           fatal-infos: true
           fatal-warnings: true
