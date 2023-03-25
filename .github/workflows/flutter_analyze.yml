@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 準備
       - uses: actions/checkout@v3
       - uses: wasabeef/import-asdf-tool-versions-action@v1.0.1
         id: asdf
@@ -23,6 +24,7 @@ jobs:
         run: flutter pub get
       - run: dart pub global activate custom_lint
 
+      # 実行
       - name: Run analyzer
         uses: invertase/github-action-dart-analyzer@v1
         with:

@@ -7,12 +7,21 @@ jobs:
   build_and_preview:
     runs-on: ubuntu-latest
     steps:
+      # 準備
       - uses: actions/checkout@v3
       - uses: wasabeef/import-asdf-tool-versions-action@v1.0.1
         id: asdf
-      - name: Install Flutter
-        run: ./.github/workflows/scripts/install-flutter.sh ${{ steps.asdf.outputs.flutter }}
-      - run: flutter pub get
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ steps.asdf.outputs.flutter }}
+      - name: Add pub cache bin to PATH
+        run: echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
+      - name: Add pub cache to PATH
+        run: echo "PUB_CACHE="$HOME/.pub-cache"" >> $GITHUB_ENV
+      - name: Install dependencies
+        run: flutter pub get
+      
+      # 実行
       - run: flutter build web
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
