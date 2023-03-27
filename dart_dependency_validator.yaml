@@ -1,0 +1,3 @@
+ignore:
+  - text_style_preview
+  - riverpod_lint
