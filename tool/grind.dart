@@ -138,11 +138,11 @@ Future<void> commitMessage() async {
 - テスト追加:新規APIエンドポイントのテストケースを作成
 - ドキュメント更新:README.mdに使用方法を追記
 ''',
-        role: 'system',
+        role: OpenAIChatMessageRole.system,
       ),
       OpenAIChatCompletionChoiceMessageModel(
         content: diff,
-        role: 'user',
+        role: OpenAIChatMessageRole.user,
       ),
     ],
   );
