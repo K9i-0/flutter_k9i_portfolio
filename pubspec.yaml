@@ -45,8 +45,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  # 文言リソースが自動生成されるはずが動かない😭
-  # generate: true
+  generate: true
 
   assets:
     - assets/images/
