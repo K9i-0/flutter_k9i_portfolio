@@ -1,7 +1,7 @@
 name: flutter_k9i_portfolio
 description: A new Flutter project.
 publish_to: "none"
-version: 0.2.2
+version: 0.2.3
 
 environment:
   sdk: ">=2.19.6 <3.0.0"

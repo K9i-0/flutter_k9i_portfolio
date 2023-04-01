@@ -30,11 +30,17 @@ class WorksRepository {
       ),
       Work.flutterPackage(
         createdAt: DateTime(2023, 3, 15),
-        description:
-            'SimpleLoadingDialog: A seamless full-screen loading dialog for Flutter. Efficiently manage actions while awaiting Futures, and easily customize with Widgets and ThemeExtension.',
+        description: 'Futureを待つ間に表示するシンプルなローディングダイアログ',
         packageName: 'simple_loading_dialog',
         pubDevUrl: 'https://pub.dev/packages/simple_loading_dialog',
         githubUrl: 'https://github.com/K9i-0/simple_loading_dialog',
+      ),
+      Work.flutterPackage(
+        createdAt: DateTime(2023, 4),
+        description: 'Grinderタスクを提供するパッケージ',
+        packageName: 'k9i_cli',
+        pubDevUrl: 'https://pub.dev/packages/k9i_cli',
+        githubUrl: 'https://github.com/K9i-0/k9i_cli',
       ),
       Work.mobileApp(
         createdAt: DateTime(2021, 8, 14),
