@@ -1,10 +1,3 @@
 {
     "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.7.9-stable",
-    "filewatcher.commands": [
-        {
-            "match": "\\.arb$",
-            "cmd": "cd ${workspaceRoot} && flutter gen-l10n",
-            "event": "onFileChange"
-		}
-    ]
 }
