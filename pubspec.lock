@@ -541,6 +541,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.8.0"
+  k9i_cli:
+    dependency: "direct dev"
+    description:
+      name: k9i_cli
+      sha256: "09a76075023b4ba1f292260a85112b7fc70bbaaf30827fbd6ef6956ecdedd416"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   logging:
     dependency: transitive
     description:
