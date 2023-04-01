@@ -1,5 +1,5 @@
 {
-    "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.7.8-stable",
+    "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.7.9-stable",
     "filewatcher.commands": [
         {
             "match": "\\.arb$",
