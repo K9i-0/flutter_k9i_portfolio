@@ -39,12 +39,14 @@ dev_dependencies:
     sdk: flutter
   freezed: ^2.3.2
   grinder: ^0.9.3
+  k9i_cli: ^1.0.0
   riverpod_generator: ^2.1.4
   riverpod_lint: ^1.1.6
 
 flutter:
   uses-material-design: true
-  generate: true
+  # 文言リソースが自動生成されるはずが動かない😭
+  # generate: true
 
   assets:
     - assets/images/
