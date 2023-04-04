@@ -7,6 +7,7 @@ import 'package:flutter_k9i_portfolio/features/settings/settings.dart';
 import 'package:flutter_k9i_portfolio/resources/assets.gen.dart';
 import 'package:flutter_k9i_portfolio/resources/flutter_colors.dart';
 import 'package:flutter_k9i_portfolio/resources/fonts.gen.dart';
+import 'package:flutter_k9i_portfolio/resources/version.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';

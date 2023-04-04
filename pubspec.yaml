@@ -28,6 +28,7 @@ dependencies:
 dev_dependencies:
   altive_lints: any
   build_runner: ^2.3.3
+  build_version: ^2.1.1
   custom_lint: ^0.3.2
   dart_openai: ^1.9.1
   dependency_validator: ^3.2.2

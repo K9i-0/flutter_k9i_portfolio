@@ -19,6 +19,7 @@ final _router = GoRouter(
         ),
         applicationName: "K9i's Portfolio",
         applicationLegalese: '© 2023 K9i',
+        applicationVersion: packageVersion,
       ),
     ),
   ],

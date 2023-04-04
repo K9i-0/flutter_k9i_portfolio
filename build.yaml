@@ -4,3 +4,6 @@ targets:
       riverpod_generator:
         options:
           provider_family_name_suffix: "ProviderFamily"
+      build_version:
+        options:
+          output: lib/resources/version.dart
