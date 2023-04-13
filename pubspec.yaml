@@ -22,7 +22,7 @@ dependencies:
   riverpod_annotation: ^2.0.2
   shared_preferences: ^2.1.0
   simple_icons: ^7.10.0
-  text_style_preview: ^0.1.4
+  text_style_preview: ^0.1.4+3
   url_launcher: ^6.1.10
 
 dev_dependencies:
@@ -43,6 +43,7 @@ dev_dependencies:
   k9i_cli: ^1.0.0
   riverpod_generator: ^2.1.6
   riverpod_lint: ^1.2.0
+  text_style_preview_lint: ^0.2.0+2
 
 dependency_overrides: 
   # grinderとcustom_lintの依存バージョンが競合する

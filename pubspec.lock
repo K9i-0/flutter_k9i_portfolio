@@ -918,10 +918,18 @@ packages:
     dependency: "direct main"
     description:
       name: text_style_preview
-      sha256: "23ddd452dfeec278cba1232c35de4beb06b5af337dd7e340abd5d7ad2bf0390a"
+      sha256: "7e8bf4de187b18bfabedc15373ea5975259e9b1d396b7cafbc0701c8863037df"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.4"
+    version: "0.1.4+3"
+  text_style_preview_lint:
+    dependency: "direct dev"
+    description:
+      name: text_style_preview_lint
+      sha256: "7a760040d8d034e72714d032997b2335393154cb18de63ac8e33163a353cf500"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.0+2"
   time:
     dependency: transitive
     description:
