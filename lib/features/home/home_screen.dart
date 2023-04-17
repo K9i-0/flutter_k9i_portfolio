@@ -38,6 +38,7 @@ class Content extends ConsumerWidget {
           floating: true,
           expandedHeight: 300,
           flexibleSpace: const FlexibleSpaceBar(
+            centerTitle: true,
             expandedTitleScale: 1,
             // overflowの警告を消すためにmaxHeightを指定
             title: OverflowBox(
