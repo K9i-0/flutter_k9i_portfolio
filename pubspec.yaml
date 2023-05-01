@@ -34,7 +34,7 @@ dev_dependencies:
   dependency_validator: ^3.2.2
   dotenv: ^4.1.0
   flutter_gen_runner: ^5.2.0
-  flutter_launcher_icons: ^0.13.0
+  flutter_launcher_icons: ^0.13.1
   flutter_native_splash: ^2.2.19
   flutter_test:
     sdk: flutter
