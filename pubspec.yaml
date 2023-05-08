@@ -30,7 +30,7 @@ dev_dependencies:
   build_runner: ^2.3.3
   build_version: ^2.1.1
   custom_lint: ^0.3.3
-  dart_openai: ^1.9.1
+  dart_openai: ^1.9.8
   dependency_validator: ^3.2.2
   dotenv: ^4.1.0
   flutter_gen_runner: ^5.2.0
