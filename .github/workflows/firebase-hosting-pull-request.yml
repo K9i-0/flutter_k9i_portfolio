@@ -10,12 +10,12 @@ jobs:
       # 準備
       - uses: actions/checkout@v3
 
-      - name: install fvm
-        run: |
-          brew tap leoafarias/fvm
-          brew install fvm
-      - name: setup flutter
-        run: fvm install
+      - uses: kuhnroyal/flutter-fvm-config-action@v1
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: ${{ env.FLUTTER_CHANNEL }}
+          cache: true
 
       - name: Add pub cache bin to PATH
         run: echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
