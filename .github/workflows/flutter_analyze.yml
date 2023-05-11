@@ -11,12 +11,14 @@ jobs:
     steps:
       # 準備
       - uses: actions/checkout@v3
-      - uses: wasabeef/import-asdf-tool-versions-action@v1.0.1
-        id: asdf
+
+      - uses: kuhnroyal/flutter-fvm-config-action@v1
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: ${{ steps.asdf.outputs.flutter }}
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: ${{ env.FLUTTER_CHANNEL }}
           cache: true
+
       - name: Add pub cache bin to PATH
         run: echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
       - name: Add pub cache to PATH
