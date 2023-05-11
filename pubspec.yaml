@@ -17,9 +17,9 @@ dependencies:
   freezed_annotation: ^2.2.0
   gap: ^2.0.1
   go_router: ^6.5.5
-  hooks_riverpod: ^2.3.4
+  hooks_riverpod: ^2.3.6
   intl: ^0.17.0
-  riverpod_annotation: ^2.0.2
+  riverpod_annotation: ^2.1.1
   shared_preferences: ^2.1.0
   simple_icons: ^7.10.0
   text_style_preview: ^0.1.4+3
@@ -29,7 +29,7 @@ dev_dependencies:
   altive_lints: any
   build_runner: ^2.3.3
   build_version: ^2.1.1
-  custom_lint: ^0.3.3
+  custom_lint: ^0.3.4
   dart_openai: ^1.9.1
   dependency_validator: ^3.2.2
   dotenv: ^4.1.0
@@ -41,8 +41,8 @@ dev_dependencies:
   freezed: ^2.3.2
   grinder: ^0.9.3
   k9i_cli: ^1.0.0
-  riverpod_generator: ^2.1.6
-  riverpod_lint: ^1.2.0
+  riverpod_generator: ^2.2.1
+  riverpod_lint: ^1.3.1
   text_style_preview_lint: ^0.2.0+2
 
 dependency_overrides: 
