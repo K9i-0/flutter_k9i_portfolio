@@ -418,7 +418,7 @@ class __$$MobileAppWorkCopyWithImpl<$Res>
   $Res call({
     Object? createdAt = null,
     Object? description = null,
-    Object? iconImage = null,
+    Object? iconImage = freezed,
     Object? appName = null,
     Object? appStoreUrl = null,
     Object? googlePlayUrl = null,
@@ -433,7 +433,7 @@ class __$$MobileAppWorkCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      iconImage: null == iconImage
+      iconImage: freezed == iconImage
           ? _value.iconImage
           : iconImage // ignore: cast_nullable_to_non_nullable
               as AssetGenImage,
@@ -498,8 +498,7 @@ class _$MobileAppWork implements MobileAppWork {
                 other.createdAt == createdAt) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            (identical(other.iconImage, iconImage) ||
-                other.iconImage == iconImage) &&
+            const DeepCollectionEquality().equals(other.iconImage, iconImage) &&
             (identical(other.appName, appName) || other.appName == appName) &&
             (identical(other.appStoreUrl, appStoreUrl) ||
                 other.appStoreUrl == appStoreUrl) &&
@@ -510,8 +509,15 @@ class _$MobileAppWork implements MobileAppWork {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, createdAt, description,
-      iconImage, appName, appStoreUrl, googlePlayUrl, githubUrl);
+  int get hashCode => Object.hash(
+      runtimeType,
+      createdAt,
+      description,
+      const DeepCollectionEquality().hash(iconImage),
+      appName,
+      appStoreUrl,
+      googlePlayUrl,
+      githubUrl);
 
   @JsonKey(ignore: true)
   @override

@@ -4,7 +4,7 @@ publish_to: "none"
 version: 0.2.3
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.0.6 <4.0.0"
 
 dependencies:
   flutter:
@@ -14,40 +14,41 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  freezed_annotation: ^2.2.0
-  gap: ^2.0.1
+  freezed_annotation: ^2.4.1
+  gap: ^3.0.1
   go_router: ^6.5.5
   hooks_riverpod: ^2.3.6
-  intl: ^0.17.0
+  intl: ^0.18.1
   riverpod_annotation: ^2.1.1
-  shared_preferences: ^2.1.0
+  shared_preferences: ^2.2.0
   simple_icons: ^7.10.0
   text_style_preview: ^0.1.4+3
-  url_launcher: ^6.1.10
+  url_launcher: ^6.1.12
 
 dev_dependencies:
   altive_lints: any
-  build_runner: ^2.3.3
+  build_runner: ^2.4.6
   build_version: ^2.1.1
-  custom_lint: ^0.3.4
+  custom_lint: ^0.4.0
   dart_openai: ^1.9.1
   dependency_validator: ^3.2.2
   dotenv: ^4.1.0
-  flutter_gen_runner: ^5.2.0
-  flutter_launcher_icons: ^0.13.0
-  flutter_native_splash: ^2.2.19
+  flutter_gen_runner: ^5.3.1
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.1
   flutter_test:
     sdk: flutter
-  freezed: ^2.3.2
-  grinder: ^0.9.3
+  freezed: ^2.4.1
+  grinder: ^0.9.4
   k9i_cli: ^1.0.0
-  riverpod_generator: ^2.2.1
-  riverpod_lint: ^1.3.1
+  riverpod_generator: ^2.2.3
+  riverpod_lint: ^1.3.2
   text_style_preview_lint: ^0.2.0+2
 
-dependency_overrides: 
+dependency_overrides:
   # grinderとcustom_lintの依存バージョンが競合する
   cli_util: ^0.4.0
+  custom_lint_builder: ^0.4.0
   intl: ^0.17.0
 
 flutter:
