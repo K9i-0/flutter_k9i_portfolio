@@ -1,6 +1,11 @@
 targets:
   $default:
     builders:
+      source_gen|combining_builder:
+        options:
+          ignore_for_file:
+            - type=lint
+            - duplicate_ignore
       riverpod_generator:
         options:
           provider_family_name_suffix: "ProviderFamily"

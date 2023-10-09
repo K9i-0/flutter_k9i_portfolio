@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_hooks: ^0.18.6
+  flutter_hooks: ^0.20.2
   flutter_localizations:
     sdk: flutter
   flutter_web_plugins:
@@ -26,11 +26,9 @@ dependencies:
   url_launcher: ^6.1.12
 
 dev_dependencies:
-  altive_lints: any
   build_runner: ^2.4.6
   build_version: ^2.1.1
-  custom_lint: ^0.4.0
-  dart_openai: ^1.9.1
+  custom_lint: ^0.5.3
   dependency_validator: ^3.2.2
   dotenv: ^4.1.0
   flutter_gen_runner: ^5.3.1
@@ -40,16 +38,18 @@ dev_dependencies:
     sdk: flutter
   freezed: ^2.4.1
   grinder: ^0.9.4
-  k9i_cli: ^1.0.0
+  k9i_cli: ^1.1.0
+  pedantic_mono: ^1.24.0+1
   riverpod_generator: ^2.2.3
-  riverpod_lint: ^1.3.2
+  riverpod_lint: ^2.3.0
   text_style_preview_lint: ^0.2.0+2
 
 dependency_overrides:
+  analyzer: ^6.0.0
   # grinderとcustom_lintの依存バージョンが競合する
   cli_util: ^0.4.0
-  custom_lint_builder: ^0.4.0
-  intl: ^0.17.0
+  custom_lint_builder: ^0.5.3
+  riverpod_analyzer_utils: ^0.4.1
 
 flutter:
   uses-material-design: true
