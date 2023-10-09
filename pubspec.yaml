@@ -1,7 +1,7 @@
 name: flutter_k9i_portfolio
 description: A new Flutter project.
 publish_to: "none"
-version: 0.2.3
+version: 0.2.4
 
 environment:
   sdk: ">=3.1.3 <4.0.0"
@@ -40,7 +40,7 @@ dev_dependencies:
   grinder: ^0.9.4
   k9i_cli: ^1.1.0
   pedantic_mono: ^1.24.0+1
-  riverpod_generator: ^2.2.3
+  riverpod_generator: ^3.0.0-dev.3
   riverpod_lint: ^2.3.0
   text_style_preview_lint: ^0.2.0+2
 
@@ -49,7 +49,6 @@ dependency_overrides:
   # grinderとcustom_lintの依存バージョンが競合する
   cli_util: ^0.4.0
   custom_lint_builder: ^0.5.3
-  riverpod_analyzer_utils: ^0.4.1
 
 flutter:
   uses-material-design: true

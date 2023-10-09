@@ -147,11 +147,11 @@ class _$WorkCopyWithImpl<$Res, $Val extends Work>
 }
 
 /// @nodoc
-abstract class _$$FlutterPackageWorkCopyWith<$Res>
+abstract class _$$FlutterPackageWorkImplCopyWith<$Res>
     implements $WorkCopyWith<$Res> {
-  factory _$$FlutterPackageWorkCopyWith(_$FlutterPackageWork value,
-          $Res Function(_$FlutterPackageWork) then) =
-      __$$FlutterPackageWorkCopyWithImpl<$Res>;
+  factory _$$FlutterPackageWorkImplCopyWith(_$FlutterPackageWorkImpl value,
+          $Res Function(_$FlutterPackageWorkImpl) then) =
+      __$$FlutterPackageWorkImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -163,11 +163,11 @@ abstract class _$$FlutterPackageWorkCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$FlutterPackageWorkCopyWithImpl<$Res>
-    extends _$WorkCopyWithImpl<$Res, _$FlutterPackageWork>
-    implements _$$FlutterPackageWorkCopyWith<$Res> {
-  __$$FlutterPackageWorkCopyWithImpl(
-      _$FlutterPackageWork _value, $Res Function(_$FlutterPackageWork) _then)
+class __$$FlutterPackageWorkImplCopyWithImpl<$Res>
+    extends _$WorkCopyWithImpl<$Res, _$FlutterPackageWorkImpl>
+    implements _$$FlutterPackageWorkImplCopyWith<$Res> {
+  __$$FlutterPackageWorkImplCopyWithImpl(_$FlutterPackageWorkImpl _value,
+      $Res Function(_$FlutterPackageWorkImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -179,7 +179,7 @@ class __$$FlutterPackageWorkCopyWithImpl<$Res>
     Object? pubDevUrl = null,
     Object? githubUrl = null,
   }) {
-    return _then(_$FlutterPackageWork(
+    return _then(_$FlutterPackageWorkImpl(
       createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -206,8 +206,8 @@ class __$$FlutterPackageWorkCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FlutterPackageWork implements FlutterPackageWork {
-  const _$FlutterPackageWork(
+class _$FlutterPackageWorkImpl implements FlutterPackageWork {
+  const _$FlutterPackageWorkImpl(
       {required this.createdAt,
       required this.description,
       required this.packageName,
@@ -234,7 +234,7 @@ class _$FlutterPackageWork implements FlutterPackageWork {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FlutterPackageWork &&
+            other is _$FlutterPackageWorkImpl &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.description, description) ||
@@ -254,8 +254,8 @@ class _$FlutterPackageWork implements FlutterPackageWork {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FlutterPackageWorkCopyWith<_$FlutterPackageWork> get copyWith =>
-      __$$FlutterPackageWorkCopyWithImpl<_$FlutterPackageWork>(
+  _$$FlutterPackageWorkImplCopyWith<_$FlutterPackageWorkImpl> get copyWith =>
+      __$$FlutterPackageWorkImplCopyWithImpl<_$FlutterPackageWorkImpl>(
           this, _$identity);
 
   @override
@@ -372,7 +372,7 @@ abstract class FlutterPackageWork implements Work {
       required final String description,
       required final String packageName,
       required final String pubDevUrl,
-      required final String githubUrl}) = _$FlutterPackageWork;
+      required final String githubUrl}) = _$FlutterPackageWorkImpl;
 
   @override
   DateTime get createdAt;
@@ -384,15 +384,16 @@ abstract class FlutterPackageWork implements Work {
   String get githubUrl;
   @override
   @JsonKey(ignore: true)
-  _$$FlutterPackageWorkCopyWith<_$FlutterPackageWork> get copyWith =>
+  _$$FlutterPackageWorkImplCopyWith<_$FlutterPackageWorkImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$MobileAppWorkCopyWith<$Res> implements $WorkCopyWith<$Res> {
-  factory _$$MobileAppWorkCopyWith(
-          _$MobileAppWork value, $Res Function(_$MobileAppWork) then) =
-      __$$MobileAppWorkCopyWithImpl<$Res>;
+abstract class _$$MobileAppWorkImplCopyWith<$Res>
+    implements $WorkCopyWith<$Res> {
+  factory _$$MobileAppWorkImplCopyWith(
+          _$MobileAppWorkImpl value, $Res Function(_$MobileAppWorkImpl) then) =
+      __$$MobileAppWorkImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -406,11 +407,11 @@ abstract class _$$MobileAppWorkCopyWith<$Res> implements $WorkCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$MobileAppWorkCopyWithImpl<$Res>
-    extends _$WorkCopyWithImpl<$Res, _$MobileAppWork>
-    implements _$$MobileAppWorkCopyWith<$Res> {
-  __$$MobileAppWorkCopyWithImpl(
-      _$MobileAppWork _value, $Res Function(_$MobileAppWork) _then)
+class __$$MobileAppWorkImplCopyWithImpl<$Res>
+    extends _$WorkCopyWithImpl<$Res, _$MobileAppWorkImpl>
+    implements _$$MobileAppWorkImplCopyWith<$Res> {
+  __$$MobileAppWorkImplCopyWithImpl(
+      _$MobileAppWorkImpl _value, $Res Function(_$MobileAppWorkImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -424,7 +425,7 @@ class __$$MobileAppWorkCopyWithImpl<$Res>
     Object? googlePlayUrl = null,
     Object? githubUrl = freezed,
   }) {
-    return _then(_$MobileAppWork(
+    return _then(_$MobileAppWorkImpl(
       createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -459,8 +460,8 @@ class __$$MobileAppWorkCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$MobileAppWork implements MobileAppWork {
-  const _$MobileAppWork(
+class _$MobileAppWorkImpl implements MobileAppWork {
+  const _$MobileAppWorkImpl(
       {required this.createdAt,
       required this.description,
       required this.iconImage,
@@ -493,7 +494,7 @@ class _$MobileAppWork implements MobileAppWork {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MobileAppWork &&
+            other is _$MobileAppWorkImpl &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.description, description) ||
@@ -522,8 +523,8 @@ class _$MobileAppWork implements MobileAppWork {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$MobileAppWorkCopyWith<_$MobileAppWork> get copyWith =>
-      __$$MobileAppWorkCopyWithImpl<_$MobileAppWork>(this, _$identity);
+  _$$MobileAppWorkImplCopyWith<_$MobileAppWorkImpl> get copyWith =>
+      __$$MobileAppWorkImplCopyWithImpl<_$MobileAppWorkImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -641,7 +642,7 @@ abstract class MobileAppWork implements Work {
       required final String appName,
       required final String appStoreUrl,
       required final String googlePlayUrl,
-      final String? githubUrl}) = _$MobileAppWork;
+      final String? githubUrl}) = _$MobileAppWorkImpl;
 
   @override
   DateTime get createdAt;
@@ -655,15 +656,15 @@ abstract class MobileAppWork implements Work {
   String? get githubUrl;
   @override
   @JsonKey(ignore: true)
-  _$$MobileAppWorkCopyWith<_$MobileAppWork> get copyWith =>
+  _$$MobileAppWorkImplCopyWith<_$MobileAppWorkImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$WebAppWorkCopyWith<$Res> implements $WorkCopyWith<$Res> {
-  factory _$$WebAppWorkCopyWith(
-          _$WebAppWork value, $Res Function(_$WebAppWork) then) =
-      __$$WebAppWorkCopyWithImpl<$Res>;
+abstract class _$$WebAppWorkImplCopyWith<$Res> implements $WorkCopyWith<$Res> {
+  factory _$$WebAppWorkImplCopyWith(
+          _$WebAppWorkImpl value, $Res Function(_$WebAppWorkImpl) then) =
+      __$$WebAppWorkImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -675,11 +676,11 @@ abstract class _$$WebAppWorkCopyWith<$Res> implements $WorkCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$WebAppWorkCopyWithImpl<$Res>
-    extends _$WorkCopyWithImpl<$Res, _$WebAppWork>
-    implements _$$WebAppWorkCopyWith<$Res> {
-  __$$WebAppWorkCopyWithImpl(
-      _$WebAppWork _value, $Res Function(_$WebAppWork) _then)
+class __$$WebAppWorkImplCopyWithImpl<$Res>
+    extends _$WorkCopyWithImpl<$Res, _$WebAppWorkImpl>
+    implements _$$WebAppWorkImplCopyWith<$Res> {
+  __$$WebAppWorkImplCopyWithImpl(
+      _$WebAppWorkImpl _value, $Res Function(_$WebAppWorkImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -691,7 +692,7 @@ class __$$WebAppWorkCopyWithImpl<$Res>
     Object? webUrl = freezed,
     Object? githubUrl = null,
   }) {
-    return _then(_$WebAppWork(
+    return _then(_$WebAppWorkImpl(
       createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -718,8 +719,8 @@ class __$$WebAppWorkCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$WebAppWork implements WebAppWork {
-  const _$WebAppWork(
+class _$WebAppWorkImpl implements WebAppWork {
+  const _$WebAppWorkImpl(
       {required this.createdAt,
       required this.description,
       required this.appName,
@@ -746,7 +747,7 @@ class _$WebAppWork implements WebAppWork {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$WebAppWork &&
+            other is _$WebAppWorkImpl &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.description, description) ||
@@ -764,8 +765,8 @@ class _$WebAppWork implements WebAppWork {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$WebAppWorkCopyWith<_$WebAppWork> get copyWith =>
-      __$$WebAppWorkCopyWithImpl<_$WebAppWork>(this, _$identity);
+  _$$WebAppWorkImplCopyWith<_$WebAppWorkImpl> get copyWith =>
+      __$$WebAppWorkImplCopyWithImpl<_$WebAppWorkImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -878,7 +879,7 @@ abstract class WebAppWork implements Work {
       required final String description,
       required final String appName,
       final String? webUrl,
-      required final String githubUrl}) = _$WebAppWork;
+      required final String githubUrl}) = _$WebAppWorkImpl;
 
   @override
   DateTime get createdAt;
@@ -890,6 +891,6 @@ abstract class WebAppWork implements Work {
   String get githubUrl;
   @override
   @JsonKey(ignore: true)
-  _$$WebAppWorkCopyWith<_$WebAppWork> get copyWith =>
+  _$$WebAppWorkImplCopyWith<_$WebAppWorkImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

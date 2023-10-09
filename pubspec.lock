@@ -694,7 +694,7 @@ packages:
     source: hosted
     version: "2.4.3"
   riverpod_analyzer_utils:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
       name: riverpod_analyzer_utils
       sha256: f5770a33ce528a5a1ce6e3fe09b33c989c1cbcc74baaca9bdf96de6df1d840b1
@@ -713,10 +713,10 @@ packages:
     dependency: "direct dev"
     description:
       name: riverpod_generator
-      sha256: "5b36ad2f2b562cffb37212e8d59390b25499bf045b732276e30a207b16a25f61"
+      sha256: "277d1aa17c87ccc2992b1854e7a59368b3d677128f63231e27af3659c63fce1b"
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.3"
+    version: "3.0.0-dev.3"
   riverpod_lint:
     dependency: "direct dev"
     description:
